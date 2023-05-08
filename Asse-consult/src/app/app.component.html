@@ -1,0 +1,59 @@
+<ngx-loading-bar [ngClass]="{ 'top': appSettings.appEmpty }"></ngx-loading-bar>
+
+<!-- BEGIN #app -->
+<div id="app" class="app" [ngClass]="{
+    'has-scroll' : appHasScroll,
+    'app-sidebar-minified': appSettings.appSidebarMinified,
+		'app-sidebar-fixed': !appSettings.appSidebarNone && appSettings.appSidebarFixed,
+		'app-header-fixed': !appSettings.appHeaderNone && appSettings.appHeaderFixed,
+    'app-without-sidebar': appSettings.appSidebarNone || appSettings.appEmpty,
+    'app-without-header': appSettings.appHeaderNone || appSettings.appEmpty,
+    'app-with-end-sidebar': appSettings.appSidebarEnd,
+    'app-with-two-sidebar': appSettings.appSidebarTwo,
+    'app-with-wide-sidebar': appSettings.appSidebarWide,
+    'app-with-light-sidebar': appSettings.appSidebarLight,
+    'app-sidebar-end-toggled': appSettings.appSidebarEndToggled,
+    'app-sidebar-mobile-toggled': appSettings.appSidebarMobileToggled,
+    'app-content-full-height': appSettings.appContentFullHeight,
+    'app-with-top-menu': appSettings.appTopMenu,
+    'app-sidebar-end-mobile-toggled': appSettings.appSidebarEndMobileToggled,
+    'app-gradient-enabled': appSettings.appGradientEnabled,
+    'p-0': appSettings.appEmpty
+  }">
+
+  <top-menu *ngIf="appSettings.appTopMenu && !appSettings.appEmpty"></top-menu>
+
+  <header 
+  	(appSidebarMobileToggled)="onAppSidebarMobileToggled($event)" 
+  	(appSidebarEndToggled)="onAppSidebarEndToggled($event)" 
+  	(appSidebarEndMobileToggled)="onAppSidebarEndMobileToggled($event)" 
+  	[appSidebarTwo]="appSettings.appSidebarTwo" 
+  	*ngIf="!appSettings.appEmpty && !appSettings.appHeaderNone">
+  </header>
+
+  <sidebar 
+  	(appSidebarMinifiedToggled)="onAppSidebarMinifiedToggled($event)" 
+  	(appSidebarMobileToggled)="onAppSidebarMobileToggled($event)" 
+  	[appSidebarTransparent]="appSettings.appSidebarTransparent" 
+  	[appSidebarMinified]="appSettings.appSidebarMinified"
+  	[appSidebarGrid]="appSettings.appSidebarGrid"
+  	[appSidebarFixed]="appSettings.appSidebarFixed"
+  	*ngIf="!appSettings.appSidebarNone && !appSettings.appEmpty">
+  </sidebar>
+
+  <sidebar-right 
+    (appSidebarEndMobileToggled)="onAppSidebarEndMobileToggled($event)"
+    *ngIf="appSettings.appSidebarTwo && !appSettings.appEmpty">
+  </sidebar-right>
+
+  <div id="content" class="app-content" [ngClass]="appSettings.appContentClass + ' ' + (appSettings.appEmpty ? 'p-0 m-0' : '')">
+    <router-outlet></router-outlet>
+  </div>
+  
+  <!--<theme-panel
+  	(appDarkModeChanged)="onAppDarkModeChanged($event)"
+  	(appThemeChanged)="onAppThemeChanged($event)"
+  	*ngIf="!appSettings.appThemePanelNone"
+  	></theme-panel>-->
+</div>
+<!-- END #app -->
