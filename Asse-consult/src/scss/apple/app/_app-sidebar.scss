@@ -189,18 +189,18 @@
 		& .expand {
 			& > a {
 				background: $white;
-				color: $white;
+				color: $dark-blue;
 				
 				& .menu-caret {
-					color: $white;
+					color: $dark-blue;
 					&:before {
 						opacity: 1.0;
 						transform: rotate(90deg);
-						color: $white;
+						color: $dark-blue;
 
 						@if $enable-rtl {
 							transform: rotate(-90deg);
-							color: $white;
+							color: $dark-blue;
 						}
 					}
 				}
@@ -234,7 +234,7 @@
 					padding: $badge-padding-y $badge-padding-x;
 					font-size: 75%;
 					font-weight: $font-weight-bold;
-					color: var(--app-theme-color);
+					color: $dark-blue;
 					text-align: center;
 					white-space: nowrap;
 					vertical-align: baseline;
@@ -326,7 +326,8 @@
 				margin: 0;
 				position: relative;
 				display: none;
-	
+				color: $white;
+
 				@if $enable-rtl {
 					padding-left: 0;
 					padding-right: rem(41px);
@@ -355,7 +356,7 @@
 					&.active {
 						& > .menu-link {
 							background: none;
-							color: $white;
+							color: $dark-blue;
 						}
 						&:after {
 							border-color: var(--app-theme);
@@ -534,6 +535,7 @@
 					&:hover,
 					&:focus {
 						background: none !important;
+						color: $dark-blue;
 					}
 				}
 			}

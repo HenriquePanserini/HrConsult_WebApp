@@ -58,7 +58,6 @@
     "d3": "^7.6.1",
     "dart-sass": "^1.25.0",
     "date-fns": "^2.29.2",
-    "fibers": "^5.0.3",
     "flag-icon-css": "^4.1.6",
     "ionicons": "^6.0.3",
     "jasmine-core": "~4.4.0",
