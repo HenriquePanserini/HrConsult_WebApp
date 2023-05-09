@@ -56,7 +56,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 // Pages
 import { HomePage }          from './pages/home/home';
 import { EmailInboxPage } from './pages/email/inbox.pages';
-import { UIParcelamentoPage } from './pages/parcelmaentos/parcelamentos.pages';
+import { ParcelamentosPage } from './pages/parcelmaentos/parcelamentos.pages';
 
 @NgModule({
   declarations: [
@@ -70,7 +70,7 @@ import { UIParcelamentoPage } from './pages/parcelmaentos/parcelamentos.pages';
     
     HomePage,
     EmailInboxPage,
-    UIParcelamentoPage
+    ParcelamentosPage
   ],
   imports: [
     AppRoutingModule,

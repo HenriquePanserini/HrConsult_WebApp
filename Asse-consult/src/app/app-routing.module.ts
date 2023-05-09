@@ -9,13 +9,13 @@ import { HomePage } from './pages/home/home';
 import { EmailInboxPage } from './pages/email/inbox.pages';
 
 //UI
-import { UIParcelamentoPage } from './pages/parcelmaentos/parcelamentos.pages';
+import { ParcelamentosPage } from './pages/parcelmaentos/parcelamentos.pages';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomePage, data: { title: 'Home'} },
   { path: 'rf/inbox', component: EmailInboxPage, data: { title: 'Email Inbox'} },
-  { path: 'rf/parcelamentos', component: UIParcelamentoPage, data: { title: 'Ui Parcelmanto'} }
+  { path: 'rf/parcelamentos', component: ParcelamentosPage, data: { title: 'Ui Parcelmanto'} }
 ];
 
 @NgModule({

@@ -68,13 +68,19 @@
         <div class="card-content-list" [ngStyle]="{'color':'black', 
                                                    'margin':'12px',
                                                    'display':'flex', 
-                                                   'flex-direction':'column'}" *ngFor="let item of empData">
+                                                   'flex-direction':'column',
+                                                   'font-weight':'600'}" *ngFor="let item of empData">
           <h3 class="card-list-title" [ngStyle]="{'padding-bottom':'10px',
                                                   'font-size':'35px',
                                                   'font-family':'Helvetica',
                                                   'color':'darkblue'}">{{item.nome}}</h3>
-          <div class="card-content-grid" [ngStyle]="{'display':'flex', 'flex-direction':'row'}">
-            <div>
+          <div class="card-content-grid" [ngStyle]="{'display':'flex', 
+                                                     'flex-direction':'row',
+                                                     'background-color':'rgba(1, 96, 255, .12)',
+                                                     'border-radius':'7px',
+                                                     'border':'none',
+                                                     'padding':'15px'}">
+            <div class="content-divider">
               <h4>
                 <span [ngStyle]="{'padding-right':'80px', 'color':'silver'}">Classificação</span>
               </h4>
@@ -89,7 +95,7 @@
               <p>SIMEI: </p>
             </div> 
             </div>
-            <div>
+            <div class="content-divider">
               <h4>
                 <span [ngStyle]="{'padding-left':'80px','color':'orange'}">Atividade</span>
               </h4>
