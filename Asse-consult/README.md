@@ -21,13 +21,34 @@
             Adição de Home dashboard com cards informacionais
         </li>
         <li>
-            Adição de rotas de Caixa Postal e Parcelamentos
+            Adição de rota de Caixa Postal
         </li>
         <li>
             Modificações no CSS para Home e Email
         </li>
         <li>
             Adição de arquivo JSON para consumo de dados
+        </li>
+    </ul>
+    <h3>Atualização v.3</h3>
+    <ul>
+        <li>
+            Adição de Page Parcelmanetos
+        </li>
+        <li>
+            Edição de tags HTML de page parcelmanetos
+        </li>
+        <li>
+            Adição de rota Parcelamentos
+        </li>
+        <li>
+            Modificações no CSS para Parcelmaneto
+        </li>
+        <li>
+            Inicio de instancimaneto SCSS para elementos page
+        </li>
+        <li>
+            Inicio de criação de componentes dinamicos para cards
         </li>
     </ul>
     <div>
