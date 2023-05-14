@@ -1,1 +1,9 @@
-<p>cards view</p>
+<!--RENDER card body-->
+<ng-template #cards let-menu="card-body">
+    <div class="card-title" *ngIf="card.title">
+        <span></span>
+    </div>
+    <div class="card-content" *ngIf="card.content">
+        <p></p>
+    </div>
+</ng-template>
