@@ -1,39 +1,25 @@
-import { Component, ViewChild, AfterViewInit } 		 from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Titulos } from '../../services/titles.interface';
 
 @Component({
   selector: 'panel',
-  inputs: ['title', 'variant', 'noBody', 'noButton', 'headerClass', 'bodyClass', 'footerClass', 'panelClass'],
   templateUrl: './panel.component.html'
 })
-
-export class PanelComponent implements AfterViewInit {
-  @ViewChild('panelFooter', { static: false }) panelFooter;
-  expand = false;
-  reload = false;
-  collapse = false;
-  remove = false;
-  showFooter = false;
+export class PanelComponent implements OnInit {
   
-  ngAfterViewInit() {
-    setTimeout(() => {
-      this.showFooter = (this.panelFooter) ? this.panelFooter.nativeElement && this.panelFooter.nativeElement.children.length > 0 : false;
-    });
+  @Input() sizes2 : {header : any, body : any};
+  
+  header : { width: string, height : string};
+  body : { width: string, height : string};
+
+  constructor() { 
+   
   }
 
-  panelExpand() {
-    this.expand = !this.expand;
+  ngOnInit(): void {
+    
+     this.header = this.sizes2.header;
+     this.body = this.sizes2.body;
   }
-  panelReload() {
-    this.reload = true;
 
-    setTimeout(() => {
-      this.reload = false;
-    }, 1500);
-  }
-  panelCollapse() {
-    this.collapse = !this.collapse;
-  }
-  panelRemove() {
-    this.remove = !this.remove;
-  }
 }

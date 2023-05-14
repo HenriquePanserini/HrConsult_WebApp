@@ -1,0 +1,94 @@
+.card {
+    border-radius: rem(6px);
+    height: auto;
+    width: auto;
+
+    & .card-body{
+        background: no-repeat bottom right; 
+        background-size: auto 60%; 
+        background-color: $dark-blue; 
+        /*width: rem(725px); 
+        height: rem(45px);*/
+        border-radius: $app-card-radius;
+
+        & .card-title {
+
+            color: var(--app-theme-color); 
+            border-radius: rem(10px);
+
+            & span{
+                color: var(--app-theme-color)
+            }
+        }
+
+    }
+
+    & .card-content{
+        background-color: $app-card-bg-content; 
+        /*height: rem(350px);
+        width: rem(725px);*/
+        padding: rem(30px);
+
+        & .card-content-list{
+            color: $black; 
+            margin: rem(12px);
+            display: $app-card-display-content; 
+            flex-direction: column;
+            font-weight: 600;
+
+            & h3 {
+                padding-bottom: rem(10px);
+                font-size: rem(35px);
+                font-family: $font-family-helvetica;
+                color: $dark-blue;
+            }
+
+            & .card-content-grid {
+                display: $app-card-display-content; 
+                flex-direction: $app-card-display-direction;
+                background-color: $app-card-bg-list;
+                border-radius: rem(7px);
+                border: none;
+                padding: rem(15px);
+
+                & .content-divider-col1 {
+                    & h4 {
+                        & span {
+                            padding-right: rem(80px);
+                            color: silver;
+                        }
+                    }
+
+                    & .card-list-item {
+                        font-size: rem(16px);
+                        font-family: $font-family-helvetica;
+                        color: $black;
+                        display: $app-card-display-content;
+                        flex-direction: column;
+                    }
+                }
+
+                & .content-divider-col2 {
+                    & h4 {
+                        & span {
+                            padding-left: rem(80px);
+                            color:  orange;
+                        }
+                    }
+                    & .card-list-item {
+                        font-size: rem(16px);
+                        font-family: $font-family-helvetica;
+                        color: $black;
+                        display: $app-card-display-content;
+                        flex-direction: column;
+
+                        & p {
+                            padding-left: rem(80px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

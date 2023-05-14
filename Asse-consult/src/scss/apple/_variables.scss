@@ -336,6 +336,7 @@ $font-size-base:                    rem-default(12px) !default;
 $font-size-sm:					            rem-default(11px) !default;
 $font-size-lg:					            rem-default(14px) !default;
 $font-family-roboto:                'Candara';
+$font-family-helvetica:             'Helvetica';
 
 $font-weight-normal:                400 !default;
 $font-weight-bold:                  500 !default;
@@ -471,7 +472,11 @@ $page-header-font-size:             rem(24px) !default;
 $page-header-font-weight:           500 !default;
 $page-header-line-height:           1.35 !default;
 
-
+$app-card-radius:                   rem(6px) rem(6px) 0 0 !default;
+$app-card-bg-content:               ice !default;
+$app-card-display-content:          flex !default;
+$app-card-display-direction:        row !default;
+$app-card-bg-list:                  rgba(1, 96, 255, .12);  
 
 // 13.0 App - POS System
 

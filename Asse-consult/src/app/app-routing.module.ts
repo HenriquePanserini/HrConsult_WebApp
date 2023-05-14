@@ -9,7 +9,7 @@ import { HomePage } from './pages/home/home';
 import { EmailInboxPage } from './pages/email/inbox.pages';
 
 //UI
-import { ParcelamentosPage } from './pages/parcelmaentos/parcelamentos.pages';
+import { ParcelamentosPage } from './pages/parcelamentos/parcelamentos.pages';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },

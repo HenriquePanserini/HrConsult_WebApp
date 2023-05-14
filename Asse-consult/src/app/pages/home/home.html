@@ -9,146 +9,22 @@
 <!-- END page-header -->
 <!-- BEGIN daterange-filter -->
 <div class="d-sm-flex align-items-center mb-3">
-  <!--<div (click)="open($event)" class="ngx-daterangepicker-action btn btn-inverse me-2 text-truncate d-flex align-items-center">
-    <i class="fa fa-calendar fa-fw text-white-transparent-5 ms-n1 me-1"></i> 
-    <input type="text" class="form-control w-200px shadow-none" readonly placeholder="Choose date"
-      ngxDaterangepickerMd
-      [locale]="locale"
-      [opens]="'right'"
-      [alwaysShowCalendars]="alwaysShowCalendars"
-      [ranges]="ranges"
-      [showDropdowns]="true"
-      [showCustomRangeLabel]="true"
-      [showClearButton]="true"
-      [showCancel]="true"
-      [(ngModel)]="selected"
-      (ngModelChange)="ngModelChange($event)"
-      />
-    <b class="caret ms-1 opacity-5"></b>
-  </div>-->
   <div class="text-muted fw-bold mt-2 mt-sm-0">compared to {{ prevDate }}</div>
 </div>
 <!-- END daterange-filter -->
-
 <!-- BEGIN row -->
 <div class="row">
   <!-- BEGIN col-4 -->
   <div class="col-xl-4 col-lg-6">
     <!-- BEGIN card -->
-    <div class="card border-0 mb-3 text-white" [ngStyle]="{'border-radius':'6px', 
-                                                           'height':'auto',
-                                                           'width':'auto'}">
-      <!-- BEGIN card-body -->
-      <div class="card-body" [ngStyle]="{'background': 'no-repeat bottom right',
-                                         'background-size': 'auto 60%', 
-                                         'background-color':'steelblue', 
-                                         'width':'725px', 
-                                         'height':'45px',
-                                         'border-radius':'6px 6px 0 0 '}">
-        <!-- BEGIN title -->
-        <div class="mb-3" [ngStyle]="{'color':'white', 'border-radius':'10px'}">
-          <b>VISÃO GERAL</b>
-          <span class="ms-2" [ngStyle]="{'color':'white'}"><i class="fa fa-info-circle" triggers="mouseenter:mouseleave" popoverTitle="Sales by social source" placement="top" ngbPopover="Total online store sales that came from a social referrer source."></i></span>
-        </div>
-        <!-- END title -->
-        <!-- BEGIN sales -->
-        <h3 class="mb-10px"></h3>
-        <!-- END sales -->
-        <!-- BEGIN percentage -->
-        <div class="text-gray-500 mb-1px"><i class=""></i> </div>
-        <!-- END percentage -->
-      </div>
-      <!-- END card-body -->
-      <!-- BEGIN widget-list -->
-      <div class="widget-list rounded-bottom" [ngStyle]="{'background-color':'ice', 
-                                                          'height':'350px',
-                                                          'width':'725px',
-                                                          'padding':'30px'}">
-        <!-- BEGIN widget-list-item -->
-        <div class="card-content-list" [ngStyle]="{'color':'black', 
-                                                   'margin':'12px',
-                                                   'display':'flex', 
-                                                   'flex-direction':'column',
-                                                   'font-weight':'600'}" *ngFor="let item of empData">
-          <h3 class="card-list-title" [ngStyle]="{'padding-bottom':'10px',
-                                                  'font-size':'35px',
-                                                  'font-family':'Helvetica',
-                                                  'color':'darkblue'}">{{item.nome}}</h3>
-          <div class="card-content-grid" [ngStyle]="{'display':'flex', 
-                                                     'flex-direction':'row',
-                                                     'background-color':'rgba(1, 96, 255, .12)',
-                                                     'border-radius':'7px',
-                                                     'border':'none',
-                                                     'padding':'15px'}">
-            <div class="content-divider">
-              <h4>
-                <span [ngStyle]="{'padding-right':'80px', 'color':'silver'}">Classificação</span>
-              </h4>
-              <div class="card-list-item" [ngStyle]="{'font-size':'16px',
-                                                   'font-family':'Helvetica',
-                                                   'color':'black',
-                                                   'display':'flex',
-                                                   'flex-direction':'column'}">
-              <p>CNPJ: </p>
-              <p>CNPJ </p>
-              <p>Simples Nacional: </p>
-              <p>SIMEI: </p>
-            </div> 
-            </div>
-            <div class="content-divider">
-              <h4>
-                <span [ngStyle]="{'padding-left':'80px','color':'orange'}">Atividade</span>
-              </h4>
-              <div class="card-list-item" [ngStyle]="{'font-size':'16px',
-                                                   'font-family':'Helvetica',
-                                                   'color':'black',
-                                                   'display':'flex',
-                                                   'flex-direction':'column'}">
-              <p><span [ngStyle]="{'padding-left':'80px'}">{{item.cnpj}}</span></p>
-              <p><span [ngStyle]="{'padding-left':'80px'}">xxxxxxxxxxxxxxxxxxxxxxxxxxxx</span></p>
-              <p><span [ngStyle]="{'padding-left':'80px'}">xxxxxxxxxxxxxxxxxxxxxxxx</span></p>
-              <p><span [ngStyle]="{'padding-left':'80px'}">xxxxxxxxxxxxxxxxxxxxxxxx</span></p>
-            </div> 
-            </div>  
-          </div>                                     
-        </div>
-        <!-- END widget-list-item -->
-      </div>
-      <!-- END widget-list -->
-    </div>
+      <main-panel [data]="EmpresaDados" [sizes]="sizes.panel1"></main-panel>
     <!-- END card -->
   </div>
   <!--END col-4-->
   <div class="col-xl-4 col-lg-6">
     <!-- BEGIN card -->
-     <div class="card border-0 mb-3 text-white" [ngStyle]="{'border-radius':'6px', 
-                                                            'position':'relative', 
-                                                            'width':'195px' , 
-                                                            'left':'420px'}">
-      <!-- BEGIN card-body -->
-      <div class="card-body" [ngStyle]="{'background': 'no-repeat bottom right','background-size': 'auto 60%', 'background-color':'steelblue', 'width':'195px', 'height':'45px','border-radius':'6px 6px 0 0 '}">
-        <!-- BEGIN title -->
-        <div class="mb-3" [ngStyle]="{'color':'white', 'border-radius':'10px'}">
-          <b>AGENDAMENTOS</b>
-          <span class="ms-2" [ngStyle]="{'color':'white'}"><i class="fa fa-info-circle" triggers="mouseenter:mouseleave" popoverTitle="Sales by social source" placement="top" ngbPopover="Total online store sales that came from a social referrer source."></i></span>
-        </div>
-        <!-- END title -->
-        <!-- BEGIN sales -->
-        <h3 class="mb-10px"></h3>
-        <!-- END sales -->
-        <!-- BEGIN percentage -->
-        <div class="text-gray-500 mb-1px"><i class=""></i> </div>
-        <!-- END percentage -->
-      </div>
-      <!-- END card-body -->
-      <!-- BEGIN widget-list -->
-      <div class="widget-list rounded-bottom" [ngStyle]="{'background-color':'ice', 'height':'350px','width':'195px'}">
-        <!-- BEGIN widget-list-item -->
-       
-        <!-- END widget-list-item -->
-      </div>
-      <!-- END widget-list -->
-    </div>
+      <panel [sizes2]="sizes.panel2" [ngStyle]="{'position':'relative',
+                                                'left':'420px'}"></panel>
     <!-- END card -->
   </div>
   <!-- END col-4 -->
@@ -156,42 +32,7 @@
 <div class="row">
   <div class="col-xl-4 col-lg-6">
     <!-- BEGIN card -->
-    <div class="card border-0 mb-3 text-white" [ngStyle]="{'border-radius':'6px', 
-                                                           'height':'auto',
-                                                           'width':'auto'}">
-      <!-- BEGIN card-body -->
-      <div class="card-body" [ngStyle]="{'background': 'no-repeat bottom right',
-                                         'background-size': 'auto 60%', 
-                                         'background-color':'steelblue', 
-                                         'width':'725px', 
-                                         'height':'45px',
-                                         'border-radius':'6px 6px 0 0 '}">
-        <!-- BEGIN title -->
-        <div class="mb-3" [ngStyle]="{'color':'white', 'border-radius':'10px'}">
-          <b>EVENTOS</b>
-          <span class="ms-2" [ngStyle]="{'color':'white'}"><i class="fa fa-info-circle" triggers="mouseenter:mouseleave" popoverTitle="Sales by social source" placement="top" ngbPopover="Total online store sales that came from a social referrer source."></i></span>
-        </div>
-        <!-- END title -->
-        <!-- BEGIN sales -->
-        <h3 class="mb-10px"></h3>
-        <!-- END sales -->
-        <!-- BEGIN percentage -->
-        <div class="text-gray-500 mb-1px"><i class=""></i> </div>
-        <!-- END percentage -->
-      </div>
-      <!-- END card-body -->
-      <!-- BEGIN widget-list -->
-      <div class="widget-list rounded-bottom" [ngStyle]="{'background-color':'ice', 
-                                                          'height':'160px',
-                                                          'width':'725px'}">
-        <!-- BEGIN widget-list-item -->
-        <div class="card-content d-flex tetx-white mb-3 align-items-center">
-           
-        </div>
-        <!-- END widget-list-item -->
-      </div>
-      <!-- END widget-list -->
-    </div>
+    
     <!-- END card -->
   </div>
 </div>

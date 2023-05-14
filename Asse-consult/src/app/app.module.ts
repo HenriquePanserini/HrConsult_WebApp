@@ -12,10 +12,12 @@ import 'bootstrap';
 import { AppComponent }                    from './app.component';
 import { HeaderComponent }                 from './components/header/header.component';
 import { SidebarComponent }                from './components/sidebar/sidebar.component';
-import { SidebarRightComponent } from './components/sidebar-right/sidebar-right.component';
+import { SidebarRightComponent }           from './components/sidebar-right/sidebar-right.component';
 import { TopMenuComponent }                from './components/top-menu/top-menu.component';
-import { PanelComponent }                  from './components/panel/panel.component';
 import { FloatSubMenuComponent }           from './components/float-sub-menu/float-sub-menu.component';
+import { MainPanelComponent }              from './components/main-panel/main-panel.component';
+import { CardsComponent }                  from './components/cards/cards.component';
+import { PanelComponent }                  from './components/panel/panel.component';
 
 // Component Module
 import { NgbDatepickerModule, NgbTimepickerModule } from '@ng-bootstrap/ng-bootstrap';
@@ -56,7 +58,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 // Pages
 import { HomePage }          from './pages/home/home';
 import { EmailInboxPage } from './pages/email/inbox.pages';
-import { ParcelamentosPage } from './pages/parcelmaentos/parcelamentos.pages';
+import { ParcelamentosPage } from './pages/parcelamentos/parcelamentos.pages';
 
 @NgModule({
   declarations: [
@@ -65,9 +67,11 @@ import { ParcelamentosPage } from './pages/parcelmaentos/parcelamentos.pages';
     SidebarComponent,
     SidebarRightComponent,
     TopMenuComponent,
-    PanelComponent,
     FloatSubMenuComponent,
-    
+    MainPanelComponent,
+    CardsComponent,
+    PanelComponent,
+
     HomePage,
     EmailInboxPage,
     ParcelamentosPage
