@@ -4,7 +4,7 @@
     <div class="panel-body" [ngStyle]="{'width': header.width, 'height': header.height}">
       <!-- INICIO do titulo -->
       <div class="panel-title mb-3">
-        <b>AGENDAMENTOS</b>
+        <b>{{title | Uppercase}}</b>
         <span class="ms-2" [ngStyle]="{'color':'white'}"><i class="fa fa-info-circle" triggers="mouseenter:mouseleave" popoverTitle="Sales by social source" placement="top" ngbPopover="Total online store sales that came from a social referrer source."></i></span>
       </div>
       <!-- FIM do titulo -->

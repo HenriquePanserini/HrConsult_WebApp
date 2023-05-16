@@ -51,8 +51,27 @@
             Inicio de criação de componentes dinamicos para cards
         </li>
     </ul>
+      <h3>Atualização v.3</h3>
+    <ul>
+        <li>
+            Adição de componente de painel principal para pagina principal
+        </li>
+        <li>
+            Adicão de componente de painel
+        </li>
+         <li>
+           Adição de arquivo model de conteudos para consumir nos cards
+        </li>
+        <li>
+            Criação de componentes dicamicos de cards
+        </li>
+        <li>
+            Adição de instancia SCSS para componente cards
+        </li>
+    </ul>
     <div>
         <span>Execução: cd Asse-Consult | ng serve</span><br>
-        <span>Obs*: Caso necessario executar npm install</span> 
+        <span>Obs*: Caso necessario executar npm install</span><br>
+        <span>Obs**: Adição de configuração DockerFile</span> 
     </div>
 </div>
