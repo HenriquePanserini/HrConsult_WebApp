@@ -7,7 +7,18 @@ var appMenus = [{
   'title': 'Receita Federal',
   'url': '/menu',
   'caret': 'true',
-  'submenu': [{
+  'submenu': [
+    {
+      'url': 'rf/simples',
+      'title': 'Simples',
+      'caret': 'true'
+    },
+    {
+      'url': 'rf/mei',
+      'title': 'MEI',
+      'caret': 'true'
+    },
+    {
     'url': 'rf/parcelamentos',
     'title': 'Parcelamento',
     'caret': 'true'
