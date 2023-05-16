@@ -1,8 +1,8 @@
-export const sizeCards = { 
+export const sizePanel = { 
     panel1 : {
         header : {
             height: '45px',
-             width: '725px'
+            width: '725px'
         },
         body : {
             height: '350px',
@@ -18,5 +18,22 @@ export const sizeCards = {
             height: '350px',
             width: '210px'
         } 
+    },
+    panel3 : {
+        header : {
+            height: '45px',
+            width: '725px'
+        },
+        body : {
+            height: '190px',
+            width: '725px'
+        } 
     }
+
 }
+
+export const displayPanel = {
+    column : 'column',
+    row: 'row'
+}
+

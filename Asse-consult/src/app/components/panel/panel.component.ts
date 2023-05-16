@@ -7,8 +7,10 @@ import { Titulos } from '../../services/titles.interface';
 })
 export class PanelComponent implements OnInit {
   
-  @Input() sizes2 : {header : any, body : any};
-  
+  @Input() sizes : {header : any, body : any};
+  @Input() display : any;
+  @Input() title : any;
+
   header : { width: string, height : string};
   body : { width: string, height : string};
 
@@ -18,8 +20,9 @@ export class PanelComponent implements OnInit {
 
   ngOnInit(): void {
     
-     this.header = this.sizes2.header;
-     this.body = this.sizes2.body;
+     this.header = this.sizes.header;
+     this.body = this.sizes.body;
+     
   }
 
 }

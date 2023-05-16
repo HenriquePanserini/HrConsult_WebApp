@@ -23,8 +23,8 @@
   <!--END col-4-->
   <div class="col-xl-4 col-lg-6">
     <!-- BEGIN card -->
-      <panel [sizes2]="sizes.panel2" [ngStyle]="{'position':'relative',
-                                                'left':'420px'}"></panel>
+      <panel [sizes]="sizes.panel2" [title]="title.agendamento" [display]="display.column" [ngStyle]="{'position':'relative',
+                                                                           'left':'420px'}"></panel>
     <!-- END card -->
   </div>
   <!-- END col-4 -->
@@ -32,7 +32,7 @@
 <div class="row">
   <div class="col-xl-4 col-lg-6">
     <!-- BEGIN card -->
-    
+    <panel [sizes]="sizes.panel3" [title]="title.eventos" [display]="display.row"></panel>
     <!-- END card -->
   </div>
 </div>

@@ -1,9 +1,9 @@
 <!--INICIO do card-->
-    <div class="card border-0 mb-3 text-white">
+    <div class="panel border-0 mb-3 text-white">
       <!-- INICIO de corpo do card -->
-      <div class="card-body" [ngStyle]="{'width': header.width, 'height': header.height}">
+      <div class="panel-body" [ngStyle]="{'width': header.width, 'height': header.height}">
         <!-- INICIO do titulo -->
-        <div class="card-title mb-3">
+        <div class="panel-title mb-3">
           <b>VISÃO GERAL</b>
           <span class="ms-2" [ngStyle]="{'color':'white'}"><i class="fa fa-info-circle" triggers="mouseenter:mouseleave" popoverTitle="Sales by social source" placement="top" ngbPopover="Total online store sales that came from a social referrer source."></i></span>
         </div>
@@ -17,15 +17,15 @@
       </div>
       <!-- END card-body -->
       <!-- BEGIN widget-list -->
-      <div class="card-content widget-list rounded-bottom" [ngStyle]="{'height': body.height, 'width': body.width}">
-        <div class="card-content-list">
-          <h3 class="card-list-title">{{data.nome}}</h3>
-          <div class="card-content-grid">
+      <div class="panel-content widget-list rounded-bottom" [ngStyle]="{'height': body.height, 'width': body.width}">
+        <div class="panel-content-list">
+          <h3 class="panel-list-title">{{data.nome}}</h3>
+          <div class="panel-content-grid">
             <div class="content-divider-col1">
               <h4>
                 <span>{{titulo.classificacao}}</span>
               </h4>
-              <div class="card-list-item">
+              <div class="panel-list-item">
                 <p>{{list_titulos.cnpj}}</p>
                 <p>{{list_titulos.cnpj_matriz}}</p>
                 <p>{{list_titulos.simples}}</p>
@@ -36,7 +36,7 @@
               <h4>
                 <span>{{titulo.atividade}}</span>
               </h4>
-              <div class="card-list-item">
+              <div class="panel-list-item">
                 <p><span>{{data.cnpj}}</span></p>
                 <p><span>xxxxxxxxxxxxxxxxxxxxxxxx</span></p>
                 <p><span>{{data.simples}}</span></p>

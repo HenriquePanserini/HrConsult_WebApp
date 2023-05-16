@@ -1,9 +1,9 @@
-.card {
+.panel {
     border-radius: rem(6px);
     height: auto;
     width: auto;
 
-    & .card-body{
+    & .panel-body{
         background: no-repeat bottom right; 
         background-size: auto 60%; 
         background-color: $dark-blue; 
@@ -11,7 +11,7 @@
         height: rem(45px);*/
         border-radius: $app-card-radius;
 
-        & .card-title {
+        & .panel-title {
 
             color: var(--app-theme-color); 
             border-radius: rem(10px);
@@ -23,13 +23,14 @@
 
     }
 
-    & .card-content{
+    & .panel-content{
         background-color: $app-card-bg-content; 
         /*height: rem(350px);
         width: rem(725px);*/
         padding: rem(30px);
+        display: $app-card-display-content;
 
-        & .card-content-list{
+        & .panel-content-list{
             color: $black; 
             margin: rem(12px);
             display: $app-card-display-content; 
@@ -43,7 +44,7 @@
                 color: $dark-blue;
             }
 
-            & .card-content-grid {
+            & .panel-content-grid {
                 display: $app-card-display-content; 
                 flex-direction: $app-card-display-direction;
                 background-color: $app-card-bg-list;
@@ -59,7 +60,7 @@
                         }
                     }
 
-                    & .card-list-item {
+                    & .panel-list-item {
                         font-size: rem(16px);
                         font-family: $font-family-helvetica;
                         color: $black;
@@ -75,7 +76,7 @@
                             color:  orange;
                         }
                     }
-                    & .card-list-item {
+                    & .panel-list-item {
                         font-size: rem(16px);
                         font-family: $font-family-helvetica;
                         color: $black;
