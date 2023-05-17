@@ -4,7 +4,7 @@
     <div class="panel-body" [ngStyle]="{'width': header.width, 'height': header.height}">
       <!-- INICIO do titulo -->
       <div class="panel-title mb-3">
-        <b>AGENDAMENTOS</b>
+        <b>{{title}}</b>
         <span class="ms-2" [ngStyle]="{'color':'white'}"><i class="fa fa-info-circle" triggers="mouseenter:mouseleave" popoverTitle="Sales by social source" placement="top" ngbPopover="Total online store sales that came from a social referrer source."></i></span>
       </div>
       <!-- FIM do titulo -->
@@ -17,7 +17,7 @@
     </div>
     <!-- END card-body -->
     <!-- BEGIN widget-list -->
-    <div class="panel-content widget-list rounded-bottom" [ngStyle]="{'height': body.height, 'width': body.width, 'padding':'0px'}">
+    <div class="panel-content widget-list rounded-bottom" [ngStyle]="{'height': body.height, 'width': body.width, 'padding':'8px'}">
         <cards class="panel-component" [ngStyle]="{'display':'flex','flex-direction':display}"></cards>
     <!-- END widget-list -->
     </div>

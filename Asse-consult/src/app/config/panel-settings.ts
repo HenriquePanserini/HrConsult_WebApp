@@ -25,7 +25,7 @@ export const sizePanel = {
             width: '725px'
         },
         body : {
-            height: '190px',
+            height: '170px',
             width: '725px'
         } 
     }

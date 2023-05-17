@@ -7,7 +7,7 @@ import { sizePanel, displayPanel} from '../../config/panel-settings';
 
 @Component({
   selector: 'home',
-  templateUrl: './home.html'
+  templateUrl: './home.pages.html'
 })
 
 export class HomePage implements OnInit {
@@ -20,7 +20,10 @@ export class HomePage implements OnInit {
 
   sizes : any = sizePanel;
   display : any = displayPanel;
-  title : {agendamento : string, eventos : string};
+  title : any = {
+    agendamento : 'AGENDAMENTOS',
+    eventos : 'EVENTOS'
+  };
 
   /* Daterangepicker */
   selected: {startDate: moment.Moment, endDate: moment.Moment};
@@ -79,10 +82,6 @@ export class HomePage implements OnInit {
 			"name":"Congo",
 			"series":[{"value":2377,"name":"Thu 15"},{"value":4567,"name":"Sat 17"},{"value":2865,"name":"Mon 19"},{"value":2060,"name":"Wed 21"},{"value":3287,"name":"Fri 23"}]},{"name":"Micronesia","series":[{"value":5234,"name":"Thu 15"},{"value":2876,"name":"Sat 17"},{"value":4297,"name":"Mon 19"},{"value":2558,"name":"Wed 21"},{"value":2371,"name":"Fri 23"}]},{"name":"Malaysia","series":[{"value":2369,"name":"Thu 15"},{"value":5229,"name":"Sat 17"},{"value":3457,"name":"Mon 19"},{"value":4401,"name":"Wed 21"},{"value":2835,"name":"Fri 23"}]},{"name":"Yemen","series":[{"value":2099,"name":"Thu 15"},{"value":4383,"name":"Sat 17"},{"value":6724,"name":"Mon 19"},{"value":2870,"name":"Wed 21"},{"value":5753,"name":"Fri 23"}]},{"name":"Åland Islands","series":[{"value":4907,"name":"Thu 15"},{"value":2428,"name":"Sat 17"},{"value":5384,"name":"Mon 19"},{"value":5966,"name":"Wed 21"},{"value":2605,"name":"Fri 23"}]
 		}];
-    this.title = {
-      agendamento : 'AGENDAMENTO',
-      eventos : 'EVENTOS'
-    }
   }
 
   ngModelChange(e) {

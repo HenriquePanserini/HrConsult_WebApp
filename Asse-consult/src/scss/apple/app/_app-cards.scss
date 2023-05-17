@@ -1,0 +1,61 @@
+.card-body{
+    width: rem(180px);
+    height: rem(100px);
+    margin: rem(7px);
+    padding: rem(9px);
+    border: none;
+    border-radius: rem(8px);
+    background-color: $app-card-bg-body;
+    font-family: $font-family-helvetica;
+    color: $black;
+    font-weight: 700;
+    align-items: $app-card-content-position;
+    justify-content: $app-card-content-position;
+
+    & .card-items{
+
+        align-items: $app-card-content-position;
+        justify-content: $app-card-content-position;
+        padding: rem(6px);
+
+        & .card-data{
+            padding: 0px;
+            margin: 0px;
+            align-items: baseline;
+            color: $black;
+
+            & span {
+                font-size: $font-size-sm;
+                font-weight: 600;
+            }
+
+        }
+
+        & .card-title{
+            padding: 0px;
+            margin: 0px;
+            align-items: baseline;
+            color: $dark-blue;
+
+            & h5 {
+                font-weight: 700;
+                font-size: medium;
+            }
+
+        }
+
+        & .card-content{
+            padding: 0px;
+            margin: 0px;
+            align-items: baseline;
+            color: $black;
+
+            & p {
+
+                font-size: $font-size-sm;
+                font-weight: 600;
+            }
+        }
+
+    }
+}

@@ -476,7 +476,9 @@ $app-card-radius:                   rem(6px) rem(6px) 0 0 !default;
 $app-card-bg-content:               ice !default;
 $app-card-display-content:          flex !default;
 $app-card-display-direction:        row !default;
-$app-card-bg-list:                  rgba(1, 96, 255, .12);  
+$app-card-bg-list:                  rgba(1, 96, 255, .12); 
+$app-card-content-position:         center !default;
+$app-card-bg-body:                  rgba(70, 130, 180, .16);
 
 // 13.0 App - POS System
 
