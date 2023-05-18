@@ -1,0 +1,27 @@
+<ng-template #cardsBodyOrders let-card="order">
+    <div class="result-item">
+        <div class="result-info">
+            <h4 class="order-title" *ngIf="order.nome"><a href="javascript:;">{{order.nome}}</a></h4>
+            <p class="order-type" *ngIf="order.tipo">{{order.data}}</p>
+            <p class="order-data" *ngIf="order.data">
+                {{order.tipo}}
+            </p>
+            <div class="btn-row">
+                <a href="javascript:;" data-toggle="tooltip" data-container="body" data-title="Analytics"><i class="fa fa-fw fa-chart-bar"></i></a>
+                <a href="javascript:;" data-toggle="tooltip" data-container="body" data-title="Tasks"><i class="fa fa-fw fa-tasks"></i></a>
+                <a href="javascript:;" data-toggle="tooltip" data-container="body" data-title="Configuration"><i class="fa fa-fw fa-cog"></i></a>
+                <a href="javascript:;" data-toggle="tooltip" data-container="body" data-title="Performance"><i class="fa fa-fw fa-tachometer"></i></a>
+                <a href="javascript:;" data-toggle="tooltip" data-container="body" data-title="Users"><i class="fa fa-fw fa-user"></i></a>
+            </div>
+        </div>
+        <div class="order-bills" *ngIf="order.pagos && order.parcelas">
+            {{order.pagos}} /<small>{{order.parcelas}}</small>
+            <a href="javascript:;" class="btn btn-yellow d-block w-100">Ver Detalhes</a>
+        </div>
+    </div>
+</ng-template>
+
+<div class="card-order-body" *ngFor="let order of orders">
+    <ng-container class="card-items" *ngTemplateOutlet="cardsBodyOrders; context : {order: order}"></ng-container>
+</div>
+

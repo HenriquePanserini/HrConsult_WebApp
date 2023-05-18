@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Titulos } from '../../services/titles.interface';
+import cards_agendamentos from '../../model/empresa-dados-cards.model';
 
 @Component({
   selector: 'panel',
@@ -10,6 +11,8 @@ export class PanelComponent implements OnInit {
   @Input() sizes : {header : any, body : any};
   @Input() display : any;
   @Input() title : any;
+  
+  cards : any = cards_agendamentos;
 
   header : { width: string, height : string};
   body : { width: string, height : string};

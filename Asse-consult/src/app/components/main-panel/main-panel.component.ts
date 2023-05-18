@@ -7,7 +7,7 @@ import { Titulos } from '../../services/titles.interface';
 })
 export class MainPanelComponent implements OnInit {
   
-  @Input() data : {nome : string, cnpj : string, simples : string, simei : string};
+  @Input() data : {nome : string, cnpj : string, matriz : string, simples : string, simei : string};
   @Input() sizes : {header : any, body : any};
   
   header : { width: string, height : string};

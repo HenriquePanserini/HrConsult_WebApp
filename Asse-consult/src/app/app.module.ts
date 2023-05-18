@@ -18,6 +18,9 @@ import { FloatSubMenuComponent }           from './components/float-sub-menu/flo
 import { MainPanelComponent }              from './components/main-panel/main-panel.component';
 import { CardsComponent }                  from './components/cards/cards.component';
 import { PanelComponent }                  from './components/panel/panel.component';
+import { TablesComponent }                 from './components/tables/tables.component';
+import { OrderCardsComponent }             from './components/cards/order-cards/order-cards.component';
+import { MainCardsComponent }              from './components/cards/main-cards/main-cards.component';
 
 // Component Module
 import { NgbDatepickerModule, NgbTimepickerModule } from '@ng-bootstrap/ng-bootstrap';
@@ -72,11 +75,14 @@ import { LoginPage } from './pages/login/login.pages';
     MainPanelComponent,
     CardsComponent,
     PanelComponent,
+    OrderCardsComponent,
+    MainCardsComponent,
 
     HomePage,
     EmailInboxPage,
     ParcelamentosPage,
-    LoginPage
+    LoginPage,
+    TablesComponent
   ],
   imports: [
     AppRoutingModule,

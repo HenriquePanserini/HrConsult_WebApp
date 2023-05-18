@@ -71,6 +71,7 @@ export class HomePage implements OnInit {
     this.EmpresaDados.id = 1;
     this.EmpresaDados.nome = 'Frango&Cia';
     this.EmpresaDados.cnpj = '16.587.542/0001-42';
+    this.EmpresaDados.matriz = '03.481.145/0001-40';
     this.EmpresaDados.simples = 'Não optante';
     this.EmpresaDados.simei = 'Não optante';
   }
