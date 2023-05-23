@@ -1,27 +1,77 @@
-<ng-template #cardsBodyOrders let-card="order">
-    <div class="result-item">
-        <div class="result-info">
-            <h4 class="order-title" *ngIf="order.nome"><a href="javascript:;">{{order.nome}}</a></h4>
-            <p class="order-type" *ngIf="order.tipo">{{order.data}}</p>
-            <p class="order-data" *ngIf="order.data">
-                {{order.tipo}}
-            </p>
-            <div class="btn-row">
-                <a href="javascript:;" data-toggle="tooltip" data-container="body" data-title="Analytics"><i class="fa fa-fw fa-chart-bar"></i></a>
+<ng-template #cardsBodyOrders let-card="card">
+    <div class="result-item" [ngStyle]="{'display':'flex',
+                                         'flex-direction':'row',
+                                         'justify-content':'space-evenly',
+                                         'align-items':'center',
+                                         'font-family':'Helvetica',
+                                         'width':'450px',
+                                         'height':'135px',
+                                         'padding':'4px',
+                                         'margin':'4px',
+                                         'border':'1px solid rgba(70, 130, 180, .21)',
+                                         'border-radius':'7px',
+                                         'background-color':'rgb(248, 248, 255)'}">
+        <div class="result-info" [ngStyle]="{'padding':'0px',
+                                             'margin':'0px',
+                                             'display':'flex',
+                                             'flex-direction':'column',
+                                             'position':'relative',
+                                             'right':'15px'}">
+            <div class="order-title" *ngIf="card.nome">
+                <h4><a href="javascript:;" [ngStyle]="{'text-decoration': 'none', 
+                                                       'color':'rgb(0, 16, 71)',
+                                                       'font-size':'26px',
+                                                       'font-weight':'700'}">{{card.nome}}</a></h4>
+            </div>
+            <div class="order-data" *ngIf="card.data" [ngStyle]="{'font-size':'11px',
+                                                                  'font-weight':'700',
+                                                                  'orientation':'landscape'}">
+                <span>{{card.data}}</span>
+            </div>
+            <div class="order-type" *ngIf="card.tipo" [ngStyle]="{'font-size':'11px',
+                                                                  'font-weight':'700',
+                                                                  'orientation':'landscape'}">
+                <span>{{card.tipo}}</span>
+            </div>
+             <div class="order-type" *ngIf="card.tipo" [ngStyle]="{'font-size':'11px',
+                                                                  'font-weight':'700',
+                                                                  'orientation':'landscape'}">
+                <span>R$ {{card.total}}</span>
+            </div>
+            <div class="btn-row" [ngStyle]="{'font-size':'18px'}">
                 <a href="javascript:;" data-toggle="tooltip" data-container="body" data-title="Tasks"><i class="fa fa-fw fa-tasks"></i></a>
-                <a href="javascript:;" data-toggle="tooltip" data-container="body" data-title="Configuration"><i class="fa fa-fw fa-cog"></i></a>
-                <a href="javascript:;" data-toggle="tooltip" data-container="body" data-title="Performance"><i class="fa fa-fw fa-tachometer"></i></a>
                 <a href="javascript:;" data-toggle="tooltip" data-container="body" data-title="Users"><i class="fa fa-fw fa-user"></i></a>
             </div>
         </div>
-        <div class="order-bills" *ngIf="order.pagos && order.parcelas">
-            {{order.pagos}} /<small>{{order.parcelas}}</small>
-            <a href="javascript:;" class="btn btn-yellow d-block w-100">Ver Detalhes</a>
+        <div class="order-bills" [ngStyle]="{'display':'flex',
+                                             'flex-direction':'column',
+                                             'justify-content':'center',
+                                             'align-items':'center',
+                                             'background-color':'rgba(0, 180, 231, .16)',
+                                             'padding':'8px',
+                                             'width':'150px',
+                                             'border-radius':'8px',
+                                             'border':'none'}">
+            <div class="order-pagos" *ngIf="card.pagos" [ngStyle]="{'font-size':'28px',
+                                                                    'font-weight':'700',
+                                                                    'color':'darkred',
+                                                                    'padding':'0px',
+                                                                    'margin':'0px'}">
+                <span>{{card.pagos}}<b [ngStyle]="{'color':'rgb(0, 16, 71)', 'font-size':'22px', 'font-weight':'800'}"> / </b></span>
+            </div>
+            <div class="order-parcelas" *ngIf="card.parcelas" [ngStyle]="{'font-weight':'700',
+                                                                          'color':'rgb(0, 16, 71)',
+                                                                          'font-size':'17px',
+                                                                          'padding':'0px',
+                                                                          'margin':'0px'}">
+                <small>{{card.parcelas}}</small>
+            </div>
+            <a href="javascript:;" class="btn btn-yellow d-block w-100" (click)="alternarComponente()">Ver Detalhes</a>
         </div>
     </div>
 </ng-template>
 
-<div class="card-order-body" *ngFor="let order of orders">
-    <ng-container class="card-items" *ngTemplateOutlet="cardsBodyOrders; context : {order: order}"></ng-container>
+<div class="card-order-body" *ngFor="let card of orders">
+    <ng-container class="card-items" *ngTemplateOutlet="cardsBodyOrders; context : {card: card}"></ng-container>
 </div>
 

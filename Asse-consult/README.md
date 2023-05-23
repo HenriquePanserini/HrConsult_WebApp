@@ -51,7 +51,7 @@
             Inicio de criação de componentes dinamicos para cards
         </li>
     </ul>
-      <h3>Atualização v.3</h3>
+      <h3>Atualização v.4/h3>
     <ul>
         <li>
             Adição de componente de painel principal para pagina principal
@@ -67,6 +67,21 @@
         </li>
         <li>
             Adição de instancia SCSS para componente cards
+        </li>
+    </ul>
+    <h3>Atualização v.5</h3>
+    <ul>
+        <li>
+            Adição de estrutura de template de cards a pagina de detalhamento
+        </li>
+        <li>
+            Adição de instancia SCSS para componente order-cards
+        </li>
+        <li>
+           Criação de model com dados de parcelamentos para testes nos order-cards e pagina de parcelmaneto
+        </li>
+        <li>
+            Redirecionamento para tela de detalhes do parcelamento nos cards (botão ver detalhes)
         </li>
     </ul>
     <div>

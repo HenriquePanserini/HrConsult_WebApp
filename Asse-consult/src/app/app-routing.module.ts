@@ -14,6 +14,10 @@ import { EmailInboxPage } from './pages/email/inbox.pages';
 //UI
 import { ParcelamentosPage } from './pages/parcelamentos/parcelamentos.pages';
 
+//componente-parcelas
+import { OrderCardsComponent } from './components/cards/order-cards/order-cards.component';
+import { TablesComponent } from './components/tables/tables.component';
+
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'home', component: HomePage, data: { title: 'Home'} },

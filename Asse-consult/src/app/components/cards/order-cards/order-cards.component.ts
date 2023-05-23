@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CardsComponent } from '../cards.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'order-cards',
@@ -7,10 +8,14 @@ import { CardsComponent } from '../cards.component';
 })
 export class OrderCardsComponent extends CardsComponent implements OnInit {
   
-  @Input() orders : any
+  @Input() orders : any;
 
   ngOnInit(): void {
-      this.orders;
+      
+  }
+
+  alternarComponente() : void {
+    this.middlewareService.alternarComponente.emit();
   }
 
 }

@@ -58,11 +58,12 @@
 			</div>
 			<!-- END input-group -->
 		
-			<!-- BEGIN order-cards -->
+			<!-- BEGIN order-cards OR tables -->
 			<cards class="panel-component" [ngStyle]="{'display':'flex','flex-direction': 'column'}">
-				<order-cards [orders]="orders" [ngStyle]="{'display':'flex','flex-direction': 'column'}"></order-cards>
+				<order-cards (alternarComponente)="exibirComponente = !exibirComponente" [orders]="orders" [ngStyle]="{'display':'flex','flex-direction': 'column'}"></order-cards>
 			</cards>
-			<!-- END order-cards -->
+			<tables *ngIf="!exibirComponente"></tables>
+			<!-- END order-cards OR tables-->
 
 			<div class="d-md-flex align-items-center">
 				<div class="me-md-auto text-md-left text-center mb-2 mb-md-0">
