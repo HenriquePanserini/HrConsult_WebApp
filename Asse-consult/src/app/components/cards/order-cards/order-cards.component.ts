@@ -1,21 +1,25 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { CardsComponent } from '../cards.component';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'order-cards',
   templateUrl: './order-cards.component.html'
 })
-export class OrderCardsComponent extends CardsComponent implements OnInit {
+export class OrderCardsComponent implements OnInit {
   
   @Input() orders : any;
+  @Output() changeComponent: EventEmitter<any> = new EventEmitter();
+  
+  constructor(private router : Router) {
+
+  }
 
   ngOnInit(): void {
       
   }
 
-  alternarComponente() : void {
-    this.middlewareService.alternarComponente.emit();
+  handleClick(){
+    this.changeComponent.emit();
   }
 
 }

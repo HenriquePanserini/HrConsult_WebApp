@@ -16,11 +16,11 @@ import { SidebarRightComponent }           from './components/sidebar-right/side
 import { TopMenuComponent }                from './components/top-menu/top-menu.component';
 import { FloatSubMenuComponent }           from './components/float-sub-menu/float-sub-menu.component';
 import { MainPanelComponent }              from './components/main-panel/main-panel.component';
-import { CardsComponent }                  from './components/cards/cards.component';
 import { PanelComponent }                  from './components/panel/panel.component';
 import { TablesComponent }                 from './components/tables/tables.component';
 import { OrderCardsComponent }             from './components/cards/order-cards/order-cards.component';
 import { MainCardsComponent }              from './components/cards/main-cards/main-cards.component';
+import { OrderDetailsComponent }           from './components/order-detail/order-details.component';
 
 // Component Module
 import { NgbDatepickerModule, NgbTimepickerModule } from '@ng-bootstrap/ng-bootstrap';
@@ -73,16 +73,16 @@ import { LoginPage } from './pages/login/login.pages';
     TopMenuComponent,
     FloatSubMenuComponent,
     MainPanelComponent,
-    CardsComponent,
     PanelComponent,
     OrderCardsComponent,
     MainCardsComponent,
+    TablesComponent,
+    OrderDetailsComponent,
 
     HomePage,
     EmailInboxPage,
     ParcelamentosPage,
-    LoginPage,
-    TablesComponent
+    LoginPage
   ],
   imports: [
     AppRoutingModule,

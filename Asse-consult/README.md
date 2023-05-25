@@ -84,6 +84,21 @@
             Redirecionamento para tela de detalhes do parcelamento nos cards (botão ver detalhes)
         </li>
     </ul>
+    <h3>Atualização v.5</h3>
+    <ul>
+        <li>
+            Componentização da ferramenta de tabela da tela de parcelmanto
+        </li>
+        <li>
+            Adição de troca de tela de order-cards para tabela com valores de parcela
+        </li>
+        <li>
+           Adição de rota de detalhamento para linhas da tabela
+        </li>
+        <li>
+            Adição de informaçoes de parcelas individuais aos paineis de detalhamento
+        </li>
+    </ul>
     <div>
         <span>Execução: cd Asse-Consult | ng serve</span><br>
         <span>Obs*: Caso necessario executar npm install</span><br>

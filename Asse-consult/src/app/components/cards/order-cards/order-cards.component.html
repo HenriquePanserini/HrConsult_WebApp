@@ -52,26 +52,36 @@
                                              'width':'150px',
                                              'border-radius':'8px',
                                              'border':'none'}">
-            <div class="order-pagos" *ngIf="card.pagos" [ngStyle]="{'font-size':'28px',
-                                                                    'font-weight':'700',
-                                                                    'color':'darkred',
-                                                                    'padding':'0px',
-                                                                    'margin':'0px'}">
-                <span>{{card.pagos}}<b [ngStyle]="{'color':'rgb(0, 16, 71)', 'font-size':'22px', 'font-weight':'800'}"> / </b></span>
+            <div class="orderS-data" [ngStyle]="{'display':'flex',
+                                                 'flex-direction':'row',
+                                                 'padding':'5px'}">
+                <div class="order-pagos" *ngIf="card.pagos" [ngStyle]="{'font-size':'32px',
+                                                                        'font-weight':'700',
+                                                                        'color':'darkred',
+                                                                        'padding':'0px',
+                                                                        'margin':'0px'}">
+                    <span>{{card.pagos}}<b [ngStyle]="{'color':'rgb(0, 16, 71)', 'font-size':'24px', 'font-weight':'800'}"> / </b></span>
+                </div>
+                <div class="order-parcelas" *ngIf="card.parcelas" [ngStyle]="{'font-weight':'700',
+                                                                            'color':'rgb(0, 16, 71)',
+                                                                            'font-size':'22px',
+                                                                            'padding':'0px',
+                                                                            'margin':'0px',
+                                                                            'margin-top':'10px',
+                                                                            'margin-left':'6px'}">
+                    <small>{{card.parcelas}}</small>
+                </div>
             </div>
-            <div class="order-parcelas" *ngIf="card.parcelas" [ngStyle]="{'font-weight':'700',
-                                                                          'color':'rgb(0, 16, 71)',
-                                                                          'font-size':'17px',
-                                                                          'padding':'0px',
-                                                                          'margin':'0px'}">
-                <small>{{card.parcelas}}</small>
-            </div>
-            <a href="javascript:;" class="btn btn-yellow d-block w-100" (click)="alternarComponente()">Ver Detalhes</a>
+            <button class="btn-anchor" (click)="handleClick()" [ngStyle]="{'border':'none',
+                                                                                  'background-color':'none',
+                                                                                  'background':'none'}">
+                <a href="javascript:;" class="btn btn-yellow d-block w-100">Ver Detalhes</a>
+            </button>
         </div>
     </div>
 </ng-template>
 
-<div class="card-order-body" *ngFor="let card of orders">
+<div class="card-orders" *ngFor="let card of orders">
     <ng-container class="card-items" *ngTemplateOutlet="cardsBodyOrders; context : {card: card}"></ng-container>
 </div>
 

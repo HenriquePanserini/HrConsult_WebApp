@@ -15,15 +15,15 @@ import { EmailInboxPage } from './pages/email/inbox.pages';
 import { ParcelamentosPage } from './pages/parcelamentos/parcelamentos.pages';
 
 //componente-parcelas
-import { OrderCardsComponent } from './components/cards/order-cards/order-cards.component';
-import { TablesComponent } from './components/tables/tables.component';
+import { OrderDetailsComponent } from './components/order-detail/order-details.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'home', component: HomePage, data: { title: 'Home'} },
   { path: 'login', component: LoginPage, data: { title: 'Login'} },
   { path: 'rf/inbox', component: EmailInboxPage, data: { title: 'Email Inbox'} },
-  { path: 'rf/parcelamentos', component: ParcelamentosPage, data: { title: 'Ui Parcelmanto'} }
+  { path: 'rf/parcelamentos', component: ParcelamentosPage, data: { title: 'Ui Parcelmanto'} },
+  { path: 'rf/parcelamentos/detalhes', component: OrderDetailsComponent, data: { title: 'UI Detalhamento'} },
 ];
 
 @NgModule({

@@ -1,0 +1,11 @@
+.pago {
+    color: green;
+    border: 1px solid green;
+    border-radius: 5px;
+}
+  
+.nao-pago {
+    border: 1px solid red;
+    color: red;
+    border-radius: 5px;
+}
