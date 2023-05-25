@@ -84,7 +84,7 @@
             Redirecionamento para tela de detalhes do parcelamento nos cards (botão ver detalhes)
         </li>
     </ul>
-    <h3>Atualização v.5</h3>
+    <h3>Atualização v.6</h3>
     <ul>
         <li>
             Componentização da ferramenta de tabela da tela de parcelmanto
