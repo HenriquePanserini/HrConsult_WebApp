@@ -21,6 +21,7 @@ import { TablesComponent }                 from './components/tables/tables.comp
 import { OrderCardsComponent }             from './components/cards/order-cards/order-cards.component';
 import { MainCardsComponent }              from './components/cards/main-cards/main-cards.component';
 import { OrderDetailsComponent }           from './components/order-detail/order-details.component';
+import { FormCadastroComponent }           from './components/form/form-cadastro.component';
 
 // Component Module
 import { NgbDatepickerModule, NgbTimepickerModule } from '@ng-bootstrap/ng-bootstrap';
@@ -59,10 +60,12 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 };
 
 // Pages
-import { HomePage }          from './pages/home/home.pages';
-import { EmailInboxPage } from './pages/email/inbox.pages';
-import { ParcelamentosPage } from './pages/parcelamentos/parcelamentos.pages';
-import { LoginPage } from './pages/login/login.pages';
+import { HomePage }                       from './pages/home/home.pages';
+import { EmailInboxPage }                 from './pages/email/inbox.pages';
+import { ParcelamentosPage }              from './pages/parcelamentos/parcelamentos.pages';
+import { LoginPage }                      from './pages/login/login.pages';
+import { CadastroPage }                   from './pages/cadastro/cadastro.pages';
+import { ConsultaPage }                   from './pages/cadastro/consulta/consulta.pages';
 
 @NgModule({
   declarations: [
@@ -78,11 +81,14 @@ import { LoginPage } from './pages/login/login.pages';
     MainCardsComponent,
     TablesComponent,
     OrderDetailsComponent,
+    FormCadastroComponent,
 
     HomePage,
     EmailInboxPage,
     ParcelamentosPage,
-    LoginPage
+    LoginPage,
+    CadastroPage,
+    ConsultaPage
   ],
   imports: [
     AppRoutingModule,

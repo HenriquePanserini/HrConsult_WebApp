@@ -18,7 +18,7 @@
     <!-- END card-body -->
     <!-- BEGIN card-list -->
     <div class="panel-content widget-list rounded-bottom" [ngStyle]="{'height': body.height, 'width': body.width, 'padding':'8px'}">
-      <main-cards class="card" [cards]="cards" [ngStyle]="{'display':'flex','flex-direction':display}"></main-cards>  
+        <ng-content></ng-content>
     </div>
     <!-- END card-list -->
 </div>

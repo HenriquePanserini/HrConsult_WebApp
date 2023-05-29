@@ -1,16 +1,17 @@
 <!--Render main-card-->
 <ng-template #cardsBody let-card="card">
-    <div class="card-data" *ngIf="card.data">
-        <span>{{card.data}}</span>
-     </div>
     <div class="card-title" *ngIf="card.nome">
         <h5>{{card.nome}}</h5>
      </div>
-    <div class="card-content" *ngIf="card.cnpj">
-        <p>{{card.cnpj}}</p>
+    <div class="card-content" *ngIf="card.cnpj || card.cpf ">
+        <span *ngIf="card.cnpj != null; else elseBlock">{{card.cnpj}}</span>
+        <span #elseBlock>{{card.cpf}}</span>
+    </div>
+    <div class="card-data" *ngIf="card.data">
+        <span>{{card.data}}</span>
     </div>
 </ng-template>
 
-<div class="card-body" *ngFor="let card of cards">
+<div class="card-body" *ngFor="let card of cards" [ngStyle]="{'width':'300px'}">
     <ng-container class="card-items" *ngTemplateOutlet="cardsBody; context: {card: card}"></ng-container>
 </div>

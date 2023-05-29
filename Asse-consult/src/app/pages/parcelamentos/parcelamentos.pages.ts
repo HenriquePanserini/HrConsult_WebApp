@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import parcelamento_dados  from '../../model/parcelamentos-dados.model';
-import parcelamento_dados_table from '../../model/parcelamanto-dados-table.model';
+import parcelamento_dados  from '../../model/data/parcelamentos-dados.model';
+import parcelamento_dados_table from '../../model/data/parcelamanto-dados-table.model';
 
 @Component({
 	selector: 'parcelamentos',

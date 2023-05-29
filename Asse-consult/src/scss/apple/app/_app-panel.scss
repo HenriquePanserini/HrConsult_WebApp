@@ -25,8 +25,8 @@
 
     & .panel-content{
         background-color: $app-card-bg-content; 
-        /*height: rem(350px);
-        width: rem(725px);*/
+        height: rem(350px);
+        width: rem(725px);
         padding: rem(30px);
         display: $app-card-display-content;
 
@@ -36,6 +36,7 @@
             display: $app-card-display-content; 
             flex-direction: column;
             font-weight: 600;
+            width: rem(560px);
 
             & h3 {
                 padding-bottom: rem(10px);

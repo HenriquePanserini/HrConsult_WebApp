@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import global from '../../config/globals';
 import * as moment from 'moment';
 import { DaterangepickerComponent, DaterangepickerDirective } from 'ngx-daterangepicker-material';
-import { empresaDados } from '../../model/empresa-dados.model';
+import { empresaDados } from '../../model/data/empresa-dados.model';
 import { sizePanel, displayPanel} from '../../config/panel-settings';
 
 @Component({

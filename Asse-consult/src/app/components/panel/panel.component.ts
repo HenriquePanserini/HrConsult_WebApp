@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Titulos } from '../../services/titles.interface.service';
-import cards_agendamentos from '../../model/empresa-dados-cards.model';
+import cards_agendamentos from '../../model/data/empresa-dados-cards.model';
 
 @Component({
   selector: 'panel',

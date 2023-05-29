@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import  card_info_emp  from '../../../model/empresa-dados-cards.model';
+import  card_info_emp  from '../../../model/data/empresa-dados-cards.model';
 
 @Component({
   selector: 'main-cards',
@@ -14,7 +14,7 @@ export class MainCardsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-     
+     this.cards;
   }
 
 }

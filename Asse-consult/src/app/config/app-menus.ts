@@ -2,7 +2,26 @@ var appMenus = [{
   'icon': 'fa fa-home',
   'title': 'Home',
   'url': 'home'
-},{
+},
+{
+  'icon': 'fa fa-sign-in',
+  'title': 'Registros',
+  'url': 'registros',
+  'caret': 'true',
+  'submenu': [
+    {
+      'url': 'registros/cadastrar',
+      'title': 'Cadastrar',
+      'caret': 'true'
+    },
+    {
+      'url': 'registros/consulta',
+      'title': 'Cosulta',
+      'caret': 'true'
+    } 
+  ]
+},
+{
   'icon': 'fa fa-align-left',
   'title': 'Receita Federal',
   'url': '/menu',

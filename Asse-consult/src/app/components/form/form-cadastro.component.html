@@ -1,0 +1,12 @@
+<form (ngSubmit)="salvarCadastro()">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" [(ngModel)]="novoCadastro.nome" required>
+  
+    <label for="cpf">CPF:</label>
+    <input type="text" id="cpf" [(ngModel)]="novoCadastro.cpf" required>
+  
+    <label for="cnpj">CNPJ:</label>
+    <input type="text" id="cnpj" [(ngModel)]="novoCadastro.cnpj" required>
+  
+    <button type="submit">Salvar</button>
+</form>

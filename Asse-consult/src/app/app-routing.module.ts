@@ -8,6 +8,10 @@ import { LoginPage } from './pages/login/login.pages';
 // Home
 import { HomePage } from './pages/home/home.pages';
 
+//Cadastro
+import { CadastroPage } from './pages/cadastro/cadastro.pages';
+import { ConsultaPage } from './pages/cadastro/consulta/consulta.pages';
+
 //Email
 import { EmailInboxPage } from './pages/email/inbox.pages';
 
@@ -19,11 +23,18 @@ import { OrderDetailsComponent } from './components/order-detail/order-details.c
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
+
   { path: 'home', component: HomePage, data: { title: 'Home'} },
+
   { path: 'login', component: LoginPage, data: { title: 'Login'} },
+
+  { path: 'registros/cadastrar', component: CadastroPage, data : {title: 'Cadastro'}},
+  { path: 'registros/consulta', component: ConsultaPage, data : {title: 'Consulta'}},
+
   { path: 'rf/inbox', component: EmailInboxPage, data: { title: 'Email Inbox'} },
+
   { path: 'rf/parcelamentos', component: ParcelamentosPage, data: { title: 'Ui Parcelmanto'} },
-  { path: 'rf/parcelamentos/detalhes', component: OrderDetailsComponent, data: { title: 'UI Detalhamento'} },
+  { path: 'rf/parcelamentos/detalhes', component: OrderDetailsComponent, data: { title: 'UI Detalhamento'} }
 ];
 
 @NgModule({
