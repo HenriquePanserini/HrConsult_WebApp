@@ -21,6 +21,8 @@ import { ParcelamentosPage } from './pages/parcelamentos/parcelamentos.pages';
 //componente-parcelas
 import { OrderDetailsComponent } from './components/order-detail/order-details.component';
 
+
+
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
 
@@ -29,6 +31,8 @@ const routes: Routes = [
   { path: 'login', component: LoginPage, data: { title: 'Login'} },
 
   { path: 'registros/cadastrar', component: CadastroPage, data : {title: 'Cadastro'}},
+  { path: 'registros/cadastrar/cpf', component: CadastroPage, data : {title: 'Cadastro'}},
+  { path: 'registros/cadastrar/cnpj', component: CadastroPage, data : {title: 'Cadastro'}},
   { path: 'registros/consulta', component: ConsultaPage, data : {title: 'Consulta'}},
 
   { path: 'rf/inbox', component: EmailInboxPage, data: { title: 'Email Inbox'} },

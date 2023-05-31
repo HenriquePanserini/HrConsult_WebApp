@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { TitulosTable } from '../../services/titles.interface.service';
+import { TitulosTable } from '../../services/interface/titles.interface.service';
 
 @Component({
   selector: 'tables',

@@ -1,28 +1,81 @@
-<!-- BEGIN breadcrumb -->
-<ol class="breadcrumb float-xl-end">
-    <li class="breadcrumb-item"><a href="javascript:;">Cadastro</a></li>
-</ol>
-  <!-- END breadcrumb -->
-  <!-- BEGIN page-header -->
-<h1 class="page-header mb-3">Cadastro</h1>
-  <!-- END page-header -->
-  <!-- BEGIN daterange-filter -->
-<div class="d-sm-flex align-items-center mb-3">
-    <div class="text-muted fw-bold mt-2 mt-sm-0">comparado com {{ prevDate }}</div>
+<div class="d-flex align-items-center mb-3">
+	<div>
+		<ul class="breadcrumb">
+			<li class="breadcrumb-item"><a routeLink="#">Cadastro</a></li>
+		</ul>
+		<h1 class="page-header mb-0">Cadastro</h1>
+	</div>
+	<div class="ms-auto">
+		<a href="#" class="btn btn-success btn-rounded px-4 rounded-pill"><i class="fa fa-plus fa-lg me-2 ms-n2 text-success-900"></i> Novo Cadastro </a>
+	</div>
 </div>
-  <!-- END daterange-filter -->
-  <!-- BEGIN row -->
-<div class="row">    
-    <div class="cadastro bg-primary text-black d-flex">
-        <div class="title" >
-            <h4>Cadastro Empresarial</h4>
-        </div>
-        <div class="link-consulta">
-            <span>Caso o cpf/cnpj ja exista acesse o link<a routerLink="#">Consultar cadastro</a></span>
-        </div>
-        <div class="form-cadastro">
-            <form-cadastro></form-cadastro>
-        </div>
-    </div>
+
+<div class="mb-3 d-md-flex fw-bold">
+	<div class="mt-md-0 mt-2"><a href="#" class="text-dark text-decoration-none"><i class="fa fa-download fa-fw me-1 text-dark text-opacity-50"></i> Exportar</a></div>
+	<div class="ms-md-4 mt-md-0 mt-2 dropdown-toggle">
+		<a href="#" data-bs-toggle="dropdown" class="text-dark text-decoration-none">Mais ações <b class="caret"></b></a>
+		<div class="dropdown-menu">
+			<a class="dropdown-item" href="#">Action</a>
+			<a class="dropdown-item" href="#">Another action</a>
+			<a class="dropdown-item" href="#">Something else here</a>
+			<div role="separator" class="dropdown-divider"></div>
+			<a class="dropdown-item" href="#">Separated link</a>
+		</div>
+	</div>
 </div>
-  <!-- END row -->
+
+<div class="card border-0">
+	<ul class="nav nav-tabs nav-tabs-v2 px-3">
+		<li class="nav-item me-2"><a [routerLink]='rotaCad' (click)='mostrarComponente(1)' class="nav-link px-2 active" data-bs-toggle="tab">Todos</a></li>
+		<li class="nav-item me-2"><a [routerLink]='rotaCadCpf' (click)='mostrarComponente(2)' class="nav-link px-2" data-bs-toggle="tab">CPF</a></li>
+		<li class="nav-item me-2"><a [routerLink]='rotaCadCnpj' (click)='mostrarComponente(3)' class="nav-link px-2" data-bs-toggle="tab">CNPJ</a></li>
+	</ul>
+	<div class="tab-content p-3">
+		<div class="tab-pane fade show active" id="allTab">
+			<!-- BEGIN input-group -->
+			<div class="input-group mb-3">
+				<!--<button class="btn btn-white dropdown-toggle" type="button" data-bs-toggle="dropdown"><span class="d-none d-md-inline">Filtrar Parcelmanetos</span><span class="d-inline d-md-none"><i class="fa fa-credit-card"></i></span> <b class="caret"></b></button>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#">Action</a>
+					<a class="dropdown-item" href="#">Another action</a>
+					<a class="dropdown-item" href="#">Something else here</a>
+					<div role="separator" class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">Separated link</a>
+				</div>
+				<div class="flex-fill position-relative">
+					<div class="input-group">
+						<div class="input-group-text position-absolute top-0 bottom-0 bg-none border-0 start-0" style="z-index: 1;">
+							<i class="fa fa-search opacity-5"></i>
+						</div>
+						<input type="text" class="form-control px-35px bg-light" placeholder="Procurar parcelamentos..." />
+					</div>
+				</div>-->
+			</div>
+			<!-- END input-group -->
+		
+			<!-- BEGIN order-cards OR tables -->
+			<div class="card-body" *ngIf="exibirComponente1">
+				<form-cadastro></form-cadastro>
+			</div>
+			<div class="card-body" *ngIf="exibirComponente2">
+				<form-cadastro-cpf></form-cadastro-cpf>
+			</div>
+			<div class="card-body" *ngIf="exibirComponente3">
+				<form-cadastro-cnpj></form-cadastro-cnpj>
+			</div>
+			<!-- END order-cards OR tables-->
+
+			<div class="d-md-flex align-items-center">
+				<!--<div class="me-md-auto text-md-left text-center mb-2 mb-md-0">
+					Mostrando 1 a 3 de 3 entradas
+				</div>
+				<ul class="pagination mb-0 justify-content-center">
+					<li class="page-item disabled"><a class="page-link">Previous</a></li>
+					<li class="page-item  active"><a class="page-link" href="#">1</a></li>
+					<li class="page-item"><a class="page-link" href="#">2</a></li>
+					<li class="page-item"><a class="page-link" href="#">Next</a></li>
+				</ul> -->
+			</div>
+		</div>
+	</div>
+</div>

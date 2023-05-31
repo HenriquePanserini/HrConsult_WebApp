@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Titulos } from '../../services/titles.interface.service';
+import { Titulos } from '../../services/interface/titles.interface.service';
 
 @Component({
   selector: 'main-panel',

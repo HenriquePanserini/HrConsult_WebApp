@@ -21,7 +21,9 @@ import { TablesComponent }                 from './components/tables/tables.comp
 import { OrderCardsComponent }             from './components/cards/order-cards/order-cards.component';
 import { MainCardsComponent }              from './components/cards/main-cards/main-cards.component';
 import { OrderDetailsComponent }           from './components/order-detail/order-details.component';
-import { FormCadastroComponent }           from './components/form/form-cadastro.component';
+import { FormCadastroComponent }           from './components/form/form-cadastro/form-cadastro.component';
+import { FormCadastroCnpjComponent }       from './components/form/fomr-cadastro-cnpj/form-cadastro-cnpj.component';
+import { FormCadastroCpfComponent }        from './components/form/form-cadastro-cpf/form-cadastro-cpf.component';
 
 // Component Module
 import { NgbDatepickerModule, NgbTimepickerModule } from '@ng-bootstrap/ng-bootstrap';
@@ -59,7 +61,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
 
-// Pages
+// Pages Module
 import { HomePage }                       from './pages/home/home.pages';
 import { EmailInboxPage }                 from './pages/email/inbox.pages';
 import { ParcelamentosPage }              from './pages/parcelamentos/parcelamentos.pages';
@@ -67,6 +69,11 @@ import { LoginPage }                      from './pages/login/login.pages';
 import { CadastroPage }                   from './pages/cadastro/cadastro.pages';
 import { ConsultaPage }                   from './pages/cadastro/consulta/consulta.pages';
 
+//Pipe Module
+import { FiltroCardsPipe } from './services/pipes/filtro.pipe';
+
+//Service Module
+import { CadastroService } from './services/cadastro.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -82,13 +89,18 @@ import { ConsultaPage }                   from './pages/cadastro/consulta/consul
     TablesComponent,
     OrderDetailsComponent,
     FormCadastroComponent,
+    FormCadastroCnpjComponent,
+    FormCadastroCpfComponent,
 
     HomePage,
     EmailInboxPage,
     ParcelamentosPage,
     LoginPage,
     CadastroPage,
-    ConsultaPage
+    ConsultaPage,
+
+    FiltroCardsPipe
+
   ],
   imports: [
     AppRoutingModule,
@@ -130,7 +142,8 @@ import { ConsultaPage }                   from './pages/cadastro/consulta/consul
 				xml: () => import('highlight.js/lib/languages/xml')
 			}
 		}
-	}],
+	},
+  CadastroService],
   bootstrap: [ AppComponent ]
 })
 

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import  card_info_emp  from '../../../model/data/empresa-dados-cards.model';
+import { Cadastro } from '../../../model/cadastro.model';
 
 @Component({
   selector: 'main-cards',
@@ -7,7 +7,7 @@ import  card_info_emp  from '../../../model/data/empresa-dados-cards.model';
 })
 export class MainCardsComponent implements OnInit {
  
-  @Input() cards : any;
+  @Input() cards : Cadastro[];
 
   constructor() {
 
