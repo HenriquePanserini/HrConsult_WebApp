@@ -13,9 +13,11 @@ export class CadastroPage implements OnInit{
     rotaCadCpf: string | Router;
     rotaCadCnpj: string | Router;
 
-    exibirComponente1: boolean = true;
+    //exibirComponente1: boolean = true;
     exibirComponente2: boolean = false;
     exibirComponente3: boolean = false;
+
+    cadastroRealizado: boolean = false;
 
     selected: {startDate: moment.Moment, endDate: moment.Moment};
     prevDate: any = moment().subtract('days', 15).format('D MMMM') + ' - ' + moment().subtract('days', 8).format('D MMMM YYYY');
@@ -31,13 +33,11 @@ export class CadastroPage implements OnInit{
     }
 
     mostrarComponente(componente: number) {
-      this.exibirComponente1 = false;
+      //this.exibirComponente1 = false;
       this.exibirComponente2 = false;
       this.exibirComponente3 = false;
   
-      if (componente === 1) {
-        this.exibirComponente1 = true;
-      } else if (componente === 2) {
+      if (componente === 2) {
         this.exibirComponente2 = true;
       } else if (componente === 3) {
         this.exibirComponente3 = true;

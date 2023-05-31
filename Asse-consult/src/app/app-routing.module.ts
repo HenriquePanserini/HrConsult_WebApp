@@ -3,7 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 //Login
-import { LoginPage } from './pages/login/login.pages';
+import { LoginPage }  from './pages/login/login.pages';
+import { SignInPage } from './pages/login/sign_in/sign_in.pages';
 
 // Home
 import { HomePage } from './pages/home/home.pages';
@@ -29,9 +30,10 @@ const routes: Routes = [
   { path: 'home', component: HomePage, data: { title: 'Home'} },
 
   { path: 'login', component: LoginPage, data: { title: 'Login'} },
+  { path: 'login/signin', component: SignInPage, data: { title: 'Sign in'} },
 
   { path: 'registros/cadastrar', component: CadastroPage, data : {title: 'Cadastro'}},
-  { path: 'registros/cadastrar/cpf', component: CadastroPage, data : {title: 'Cadastro'}},
+  { path: 'registros/cadastrar/cpf', component: CadastroPage, data : {title: 'Cadastro ]'}},
   { path: 'registros/cadastrar/cnpj', component: CadastroPage, data : {title: 'Cadastro'}},
   { path: 'registros/consulta', component: ConsultaPage, data : {title: 'Consulta'}},
 

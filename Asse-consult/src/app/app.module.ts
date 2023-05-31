@@ -68,12 +68,14 @@ import { ParcelamentosPage }              from './pages/parcelamentos/parcelamen
 import { LoginPage }                      from './pages/login/login.pages';
 import { CadastroPage }                   from './pages/cadastro/cadastro.pages';
 import { ConsultaPage }                   from './pages/cadastro/consulta/consulta.pages';
+import { SignInPage }                     from './pages/login/sign_in/sign_in.pages';
 
 //Pipe Module
 import { FiltroCardsPipe } from './services/pipes/filtro.pipe';
 
 //Service Module
 import { CadastroService } from './services/cadastro.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -98,7 +100,8 @@ import { CadastroService } from './services/cadastro.service';
     LoginPage,
     CadastroPage,
     ConsultaPage,
-
+    SignInPage,
+    
     FiltroCardsPipe
 
   ],

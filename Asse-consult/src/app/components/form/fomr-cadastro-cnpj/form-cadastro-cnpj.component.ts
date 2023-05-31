@@ -11,6 +11,10 @@ export class FormCadastroCnpjComponent implements OnInit{
   novoCadastro: Cadastro = new Cadastro(0,'','','','', '');
   @Input() routes : string;  
 
+  timeElapsed : number = Date.now();
+  dateNow : Date = new Date(this.timeElapsed);
+  today : string = this.dateNow.toDateString()
+
   routeCadastro : any;
   routeCpf : any;
   routeCnpj : any;
@@ -32,6 +36,7 @@ export class FormCadastroCnpjComponent implements OnInit{
   }
 
   salvarCadastro() {
+    this.novoCadastro.data = this.today
     this.cadastroService.inserirCadastro(this.novoCadastro);
     // Ou você pode chamar o método atualizarCadastro() se desejar atualizar um cadastro existente
     // this.cadastroService.atualizarCadastro(this.novoCadastro);

@@ -10,12 +10,12 @@ var appMenus = [{
   'caret': 'true',
   'submenu': [
     {
-      'url': 'registros/cadastrar',
+      'url': '/registros/cadastrar/cpf',
       'title': 'Cadastrar',
       'caret': 'true'
     },
     {
-      'url': 'registros/consulta',
+      'url': '/registros/consulta',
       'title': 'Cosulta',
       'caret': 'true'
     } 

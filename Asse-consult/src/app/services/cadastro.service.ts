@@ -50,6 +50,7 @@ export class CadastroService {
     }
   }
 
+
   deletarCadastro(id : number) : void{
      const index = this.cadastros.findIndex(cadastro => cadastro.id === id);
      if(index !== -1){
