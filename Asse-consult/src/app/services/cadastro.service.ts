@@ -44,7 +44,7 @@ export class CadastroService {
 
   atualizarCadastro(cadastroAtualizado: Cadastro): void {
     // Encontra o cadastro na lista e atualiza seus dados
-    const index = this.cadastros.findIndex(cadastro => cadastro.cpf === cadastroAtualizado.cpf || cadastro.cnpj === cadastroAtualizado.cnpj);
+    const index = this.cadastros.findIndex(cadastro => cadastro.nome === cadastroAtualizado.nome || cadastro.cpf === cadastroAtualizado.cpf || cadastro.cnpj === cadastroAtualizado.cnpj || cadastro.data === cadastroAtualizado.data);
     if (index !== -1) {
       this.cadastros[index] = cadastroAtualizado;
     }

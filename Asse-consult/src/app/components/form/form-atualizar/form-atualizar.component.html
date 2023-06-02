@@ -1,0 +1,21 @@
+<div class="modal-backdrop"></div>
+
+<div class="modal-container">
+  <div class="modal-content">
+    <h4 class="modal-title">Editar Cadastro</h4>
+    <div class="modal-body">
+      <label>Nome:</label>
+      <input type="text" [(ngModel)]="cards.nome">
+
+      <label *ngIf="cards.cpf">CPF:</label>
+      <input *ngIf="cards.cpf" type="text" [(ngModel)]="cards.cpf">
+
+      <label *ngIf="cards.cnpj">CNPJ:</label>
+      <input *ngIf="cards.cnpj" type="text" [(ngModel)]="cards.cnpj">
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary" (click)="salvarEdicao()">Salvar</button>
+      <button type="button" class="btn btn-secondary" (click)="activeModal.dismiss()">Cancelar</button>
+    </div>
+  </div>
+</div>

@@ -15,12 +15,5 @@ export class ConsultaPage{
     this.cadastros = this.cadastroService.getCadastros();
   }
 
-  atualizarCadastro(cadastro : Cadastro) : void {
-    this.cadastroService.atualizarCadastro(cadastro);
-  }
-
-  deletarCadastro(id : number) : void {
-    this.cadastroService.deletarCadastro(id);
-  }
 
 }

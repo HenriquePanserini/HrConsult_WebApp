@@ -32,7 +32,6 @@ const routes: Routes = [
   { path: 'login', component: LoginPage, data: { title: 'Login'} },
   { path: 'login/signin', component: SignInPage, data: { title: 'Sign in'} },
 
-  { path: 'registros/cadastrar', component: CadastroPage, data : {title: 'Cadastro'}},
   { path: 'registros/cadastrar/cpf', component: CadastroPage, data : {title: 'Cadastro ]'}},
   { path: 'registros/cadastrar/cnpj', component: CadastroPage, data : {title: 'Cadastro'}},
   { path: 'registros/consulta', component: ConsultaPage, data : {title: 'Consulta'}},

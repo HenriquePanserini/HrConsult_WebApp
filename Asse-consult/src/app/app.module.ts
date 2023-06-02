@@ -22,8 +22,7 @@ import { OrderCardsComponent }             from './components/cards/order-cards/
 import { MainCardsComponent }              from './components/cards/main-cards/main-cards.component';
 import { OrderDetailsComponent }           from './components/order-detail/order-details.component';
 import { FormCadastroComponent }           from './components/form/form-cadastro/form-cadastro.component';
-import { FormCadastroCnpjComponent }       from './components/form/fomr-cadastro-cnpj/form-cadastro-cnpj.component';
-import { FormCadastroCpfComponent }        from './components/form/form-cadastro-cpf/form-cadastro-cpf.component';
+import { FormAtualizarComponent }          from './components/form/form-atualizar/form-atualizar.component';
 
 // Component Module
 import { NgbDatepickerModule, NgbTimepickerModule } from '@ng-bootstrap/ng-bootstrap';
@@ -91,8 +90,7 @@ import { CadastroService } from './services/cadastro.service';
     TablesComponent,
     OrderDetailsComponent,
     FormCadastroComponent,
-    FormCadastroCnpjComponent,
-    FormCadastroCpfComponent,
+    FormAtualizarComponent,
 
     HomePage,
     EmailInboxPage,
@@ -121,7 +119,6 @@ import { CadastroService } from './services/cadastro.service';
     LoadingBarRouterModule,
     NgApexchartsModule,
     NgbDatepickerModule,
-    NgbTimepickerModule,
     NgxDatatableModule,
     NgxEditorModule,
     NgxChartsModule,

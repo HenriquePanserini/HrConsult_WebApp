@@ -14,8 +14,7 @@ export class CadastroPage implements OnInit{
     rotaCadCnpj: string | Router;
 
     //exibirComponente1: boolean = true;
-    exibirComponente2: boolean = false;
-    exibirComponente3: boolean = false;
+    exibirComponente2: boolean = true;
 
     cadastroRealizado: boolean = false;
 
@@ -35,13 +34,11 @@ export class CadastroPage implements OnInit{
     mostrarComponente(componente: number) {
       //this.exibirComponente1 = false;
       this.exibirComponente2 = false;
-      this.exibirComponente3 = false;
-  
+      
       if (componente === 2) {
         this.exibirComponente2 = true;
-      } else if (componente === 3) {
-        this.exibirComponente3 = true;
-      }
+      } 
+
     }
 
 }

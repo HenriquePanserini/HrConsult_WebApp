@@ -8,12 +8,17 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './form-cadastro.component.html'
 })
 export class FormCadastroComponent implements OnInit{
-  novoCadastro: Cadastro = new Cadastro(0,'','','','','');
-  @Input() routes : string;  
+  novoCadastro: Cadastro = new Cadastro(0,'','','','', '');
+  @Input() routes : string;
+  @Input() cadastroRealizado : boolean;  
 
-  routeCadastro : any;
-  routeCpf : any;
-  routeCnpj : any;
+  timeElapsed : number = Date.now();
+  dateNow : Date = new Date(this.timeElapsed);
+  today : string = this.dateNow.toDateString()
+
+  routeCadastro : string;
+  routeCpf : string;
+  routeCnpj : string;
 
   constructor(private cadastroService: CadastroService, private router : ActivatedRoute) {}
 
@@ -32,12 +37,14 @@ export class FormCadastroComponent implements OnInit{
   }
 
   salvarCadastro() {
+    this.novoCadastro.data = this.today
     this.cadastroService.inserirCadastro(this.novoCadastro);
     // Ou você pode chamar o método atualizarCadastro() se desejar atualizar um cadastro existente
     // this.cadastroService.atualizarCadastro(this.novoCadastro);
     console.log(this.novoCadastro);
     // Limpa o formulário
-    this.novoCadastro = new Cadastro(0,'','','','','');
+    this.novoCadastro = new Cadastro(0,'','','','', '');
+    this.cadastroRealizado = true;
   }
 
 }
