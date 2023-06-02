@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input,  ElementRef, ViewChild, HostListener } from '@angular/core';
 import { Cadastro } from '../../../model/cadastro.model';
 import { CadastroService } from '../../../services/cadastro.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
@@ -10,12 +10,21 @@ import { FormAtualizarComponent } from '../../form/form-atualizar/form-atualizar
   styleUrls: ['./main-cards.component.css']
 })
 export class MainCardsComponent implements OnInit {
- 
+  
+  @ViewChild('dropdownContainer') dropdownContainer: ElementRef;
   @Input() cards : Cadastro[];
   dropdownOpen : boolean = false;
 
   toggleDropdown() : void {
     this.dropdownOpen = !this.dropdownOpen
+  }
+
+  @HostListener('document:click', ['$event.target'])
+  onClickOutside(targetElement: any): void {
+    const clickedInside = this.dropdownContainer.nativeElement.contains(targetElement);
+    if (!clickedInside) {
+      this.dropdownOpen = false;
+    }
   }
 
   constructor(private cadastroService: CadastroService, private modalService: NgbModal) {

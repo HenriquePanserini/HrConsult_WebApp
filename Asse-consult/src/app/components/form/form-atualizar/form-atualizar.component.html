@@ -3,15 +3,15 @@
 <div class="modal-container">
   <div class="modal-content">
     <h4 class="modal-title">Editar Cadastro</h4>
-    <div class="modal-body">
+    <div class="modal-body d-flex flex-column">
       <label>Nome:</label>
-      <input type="text" [(ngModel)]="cards.nome">
+      <input type="text" [(ngModel)]="cards.nome" [ngStyle]="{'margin-right':'8px'}">
 
       <label *ngIf="cards.cpf">CPF:</label>
-      <input *ngIf="cards.cpf" type="text" [(ngModel)]="cards.cpf">
+      <input *ngIf="cards.cpf" type="text" [(ngModel)]="cards.cpf" [ngStyle]="{'margin-right':'8px'}">
 
       <label *ngIf="cards.cnpj">CNPJ:</label>
-      <input *ngIf="cards.cnpj" type="text" [(ngModel)]="cards.cnpj">
+      <input *ngIf="cards.cnpj" type="text" [(ngModel)]="cards.cnpj" [ngStyle]="{'margin-right':'8px'}">
     </div>
     <div class="modal-footer">
       <button type="button" class="btn btn-primary" (click)="salvarEdicao()">Salvar</button>

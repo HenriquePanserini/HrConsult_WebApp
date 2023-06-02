@@ -24,7 +24,7 @@
     <div class="cards-content d-flex flex-column">
         <ng-container class="card-items" *ngTemplateOutlet="cardsBody"></ng-container>
     </div>
-    <div class="menu-dropdown">
+    <div class="menu-dropdown" #dropdownContainer>
         <button class="menu-icon" (click)="toggleDropdown()">
             <i class="fa fa-ellipsis-v" aria-hidden="true" [ngStyle]="{'color':'black'}"></i>
         </button>
