@@ -5,10 +5,11 @@ import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'form-cadastro',
-  templateUrl: './form-cadastro.component.html'
+  templateUrl: './form-cadastro.component.html',
+  styleUrls: ['./form-cadastro.component.css']
 })
 export class FormCadastroComponent implements OnInit{
-  novoCadastro: Cadastro = new Cadastro(0,'','','','', '');
+  novoCadastro: Cadastro = new Cadastro(0,'','','','', '', '');
   @Input() routes : string;
   @Input() cadastroRealizado : boolean;  
 
@@ -43,10 +44,18 @@ export class FormCadastroComponent implements OnInit{
     // this.cadastroService.atualizarCadastro(this.novoCadastro);
     console.log(this.novoCadastro);
     // Limpa o formulário
-    this.novoCadastro = new Cadastro(0,'','','','', '');
+    this.novoCadastro = new Cadastro(0,'','','','', '', '');
     this.cadastroRealizado = true;
   }
 
+  onCertificadoSelecionado(files: FileList): void {
+    if (files && files.length > 0) {
+      const certificado = files[0];
+      // processar o arquivo selecionado ou enviar ao servidor
+      console.log('Certificado selecionado:', certificado);
+    }
+  }
+  
   code11 = 
   `<div class="mb-3">
     <label class="form-label">...</label>

@@ -23,15 +23,25 @@
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label class="form-label col-form-label col-md-3">Certificado: </label>
+                        <label class="form-label col-form-label col-md-3">Titulo Certificado: </label>
                         <div class="col-md-9">
                             <input type="text" class="form-control" placeholder="" />
                         </div>
                     </div>
+                    <div class="column mb-3">
+                        <label class="form-label col-form-label col-md-3">Certificado: </label>
+                        <div class="col-md-9 d-flex flex-column" [ngStyle]="{'margin-right':'25px', 'width':'100%'}">
+                            <label class="upload-input d-flex flex-column justify-content-center align-items-center">
+                                <input type="file" (change)="onCertificadoSelecionado($event.target.files)">
+                                <i class="fa fa-upload" aria-hidden="true" [ngStyle]="{'color':'gray','font-size':'22px', 'margin-bottom':'3px'}"></i>
+                                <span>Clique aqui para selecionar o certificado</span>
+                            </label>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-md-7 offset-md-3">
-                            <button type="submit" class="btn btn-default w-100px me-5px">Login</button>
-                            <button type="submit" class="btn btn-default w-100px text-white bg-red">Cancel</button>
+                            <button type="submit" class="btn btn-default w-100px me-5px">Salvar</button>
+                            <button type="submit" class="btn btn-default w-100px text-white bg-red">Cancelar</button>
                         </div>
                     </div>
                 </fieldset>

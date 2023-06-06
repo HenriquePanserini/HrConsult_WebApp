@@ -67,7 +67,8 @@
 	}
 	& .panel-body {
 		padding: $panel-body-padding-y $panel-body-padding-x;
-		
+		height: rem(480px);
+
 		@include clearfix();
 	}
 	& .panel-toolbar {
