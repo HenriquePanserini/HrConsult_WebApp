@@ -1,36 +1,46 @@
 <!--Render main-card-->
 <ng-template #cardsBody>
     <div class="card-title" *ngIf="cards.nome">
-        <h5>{{cards.nome}}</h5>
+        <h4 class="card-title">{{cards.nome}}</h4>
      </div>
 
      <div class="card-cnpj" *ngIf="cards.cnpj && !cards.cpf">
-        <span>{{cards.cnpj}}</span>
+        <p class="card-text">{{cards.cnpj}} </p>
      </div>
 
     <div class="card-content" *ngIf="!cards.cnpj || cards.cpf">   
-        <span>{{cards.cpf}}</span>
+        <p class="card-text">{{cards.cpf}}</p>
     </div>
 
     <div class="card-certify" *ngIf="cards.certificado">
-        <span>{{cards.certificado}}</span>
+        <p class="card-text">{{cards.certificado}}</p>
     </div>
     <div class="card-data" *ngIf="cards.data">
-        <span>{{cards.data}}</span>
+        <span class="card-text text-gray"><span [ngStyle]="{'margin-right':'13px'}">Atualização:</span> {{cards.data}}</span>
     </div>
 </ng-template>
 
-<div class="card-body d-flex flex-row" [ngStyle]="{'width':'auto','height':'140px','justify-content':'space-between'}">
+<div class="card-body border-0 d-flex flex-row" [ngStyle]="{'width':'auto','height':'140px','justify-content':'space-between'}">
     <div class="cards-content d-flex flex-column">
         <ng-container class="card-items" *ngTemplateOutlet="cardsBody"></ng-container>
     </div>
-    <div class="menu-dropdown" #dropdownContainer>
-        <button class="menu-icon" (click)="toggleDropdown()">
-            <i class="fa fa-ellipsis-v" aria-hidden="true" [ngStyle]="{'color':'black'}"></i>
-        </button>
-        <div class="dropdown-content" *ngIf="dropdownOpen">
-            <button (click)="abrirEditarCadastro(cards)">Editar</button>
-            <button (click)="excluirCadastro(cards.id)">Excluir</button>
+    <div class="menu-dropdown border-0 bg-transparent outline-none">
+        <a class="btn border-0 bg-transparent rounded-pill outline-none w-40px h-40px p-0 d-flex align-items-center justify-content-center" data-bs-toggle="dropdown">
+            <i class="fa fa-ellipsis-h text-gray-600 outline-none bg-transparent border-0"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-end border-0">
+            <a href="#" class="dropdown-item d-flex align-items-center">
+                <i class="fa fa-fw fa-bookmark fa-lg"></i> 
+                <div class="flex-1 ps-1">
+                    <div>Menu</div>
+                    <div class="mt-n1 text-gray-500"><small></small></div>
+                </div>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item" (click)="abrirEditarCadastro(cards)"><i class="fa fa-fw fa-edit fa-lg me-1"></i> Editar Cadastro</a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item"><i class="fa fa-fw fa-archive fa-lg me-1" (click)="excluirCadastro(cards.id)"></i> Excluir Cadastro</a>
+            <a href="#" class="dropdown-item"><i class="fa fa-fw fa-trash-alt fa-lg me-1"></i> Move to Recycle bin</a>
         </div>
     </div>
 </div>

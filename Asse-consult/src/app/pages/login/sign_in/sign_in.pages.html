@@ -2,11 +2,24 @@
 <div class="register register-with-news-feed">
 	<!-- BEGIN news-feed -->
 	<div class="news-feed">
-		<div class="news-image" style="background-image: url(/assets/img/login-bg/login-bg-15.jpg)"></div>
+		<div class="news-image" style="background-image: url(/assets/img/login-bg/login-bg-15-b.jpg)"></div>
 		<div class="news-caption">
-			<h4 class="caption-title"><b>Color</b> Admin App</h4>
+			<div class="d-flex align-items-center" [ngStyle]="{'font-family':'Helvetica',
+																   'font-weight':'700',
+																   'font-style':'italic',
+																   'font-size':'34px'}">
+				<span class="login-title" [ngStyle]="{'color':'gold'}">
+					<b [ngStyle]="{'color':'steelblue'}">ASSE</b>CONSULT
+				</span>
+			</div>
 			<p>
-				As a Color Admin app administrator, you use the Color Admin console to manage your organization’s account, such as add new users, manage security settings, and turn on the services you want your team to access.
+				Ut auctor massa ac aliquam commodo. 
+				Ut nec augue nec ex bibendum rhoncus sed eget nisl. 
+				Morbi eu tincidunt urna. Mauris rutrum et diam eu lobortis. 
+				Morbi sit amet justo ligula. In malesuada pellentesque posuere. 
+				Etiam et lacus at tortor faucibus auctor et luctus turpis. 
+				Cras euismod pellentesque rhoncus. Curabitur eget malesuada velit. 
+				Vestibulum feugiat lobortis nulla, ac rutrum felis condimentum ac.
 			</p>
 		</div>
 	</div>
@@ -16,8 +29,8 @@
 	<div class="register-container">
 		<!-- BEGIN register-header -->
 		<div class="register-header mb-25px h1">
-			<div class="mb-1">Sign Up</div>
-			<small class="d-block fs-15px lh-16">Create your Color Admin Account. It’s free and always will be.</small>
+			<div class="mb-1">Inscrever-se</div>
+			<small class="d-block fs-15px lh-16">Crie sua conta <b>Asse Consult</b>. É gratis.</small>
 		</div>
 		<!-- END register-header -->
 		
@@ -25,43 +38,43 @@
 		<div class="register-content">
 			<form #f="ngForm" (ngSubmit)="formSubmit(f)" class="fs-13px">
 				<div class="mb-3">
-					<label class="mb-2">Name <span class="text-danger">*</span></label>
+					<label class="mb-2">Nome <span class="text-danger">*</span></label>
 					<div class="row gx-3">
 						<div class="col-md-6 mb-2 mb-md-0">
-							<input type="text" class="form-control fs-13px" placeholder="First name" />
+							<input type="text" class="form-control fs-13px" placeholder="Nome" id="nome" [(ngModel)]="cadastroUsuario.nome" name="nome" />
 						</div>
 						<div class="col-md-6">
-							<input type="text" class="form-control fs-13px" placeholder="Last name" />
+							<input type="text" class="form-control fs-13px" placeholder="Sobrenome" id="sobrenome" [(ngModel)]="cadastroUsuario.sobrenome" name="sobrenome"/>
 						</div>
 					</div>
 				</div>
 				<div class="mb-3">
 					<label class="mb-2">Email <span class="text-danger">*</span></label>
-					<input type="text" class="form-control fs-13px" placeholder="Email address" />
+					<input type="text" class="form-control fs-13px" placeholder="Endereço de email" id="email" [(ngModel)]="cadastroUsuario.email" name="email"/>
 				</div>
 				<div class="mb-3">
 					<label class="mb-2">Re-enter Email <span class="text-danger">*</span></label>
-					<input type="text" class="form-control fs-13px" placeholder="Re-enter email address" />
+					<input type="text" class="form-control fs-13px" placeholder="Repetir email" id="reEmail" [(ngModel)]="cadastroUsuario.reEmail" name="reEmail"/>
 				</div>
 				<div class="mb-4">
-					<label class="mb-2">Password <span class="text-danger">*</span></label>
-					<input type="password" class="form-control fs-13px" placeholder="Password" />
+					<label class="mb-2">Senha <span class="text-danger">*</span></label>
+					<input type="password" class="form-control fs-13px" placeholder="Senha" id="senha" [(ngModel)]="cadastroUsuario.senha" name="senha"/>
 				</div>
 				<div class="form-check mb-4">
 					<input class="form-check-input" type="checkbox" value="" id="agreementCheckbox" />
 					<label class="form-check-label" for="agreementCheckbox">
-						By clicking Sign Up, you agree to our <a href="javascript:;">Terms</a> and that you have read our <a href="javascript:;">Data Policy</a>, including our <a href="javascript:;">Cookie Use</a>.
+						Ao clicar em Cadastre-se, você concorda com nossos <a href="javascript:;">Termos</a> e que você leu nosso <a href="javascript:;">Politica de uso</a>, incluindo o nosso <a href="javascript:;">Uso de cookies</a>.
 					</label>
 				</div>
 				<div class="mb-4">
-					<button type="submit" class="btn btn-primary d-block w-100 btn-lg h-45px fs-13px">Sign Up</button>
+					<button type="submit" class="btn btn-primary d-block w-100 btn-lg h-45px fs-13px">Inscrever-se</button>
 				</div>
 				<div class="mb-4 pb-5">
-					Already a member? Click <a routerLink="/login/v3">here</a> to login.
+					Voce ja possue uma conta? Clique <a routerLink="/login">aqui</a> para acessar.
 				</div>
 				<hr class="bg-gray-600 opacity-2" />
 				<p class="text-center text-gray-600">
-					&copy; Color Admin All Right Reserved 2022
+					&copy; Asse consult direitos reservados 2023
 				</p>
 			</form>
 		</div>

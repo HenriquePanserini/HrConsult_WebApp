@@ -13,7 +13,7 @@
 
 <div class="mb-3 d-md-flex fw-bold">
 	<div class="mt-md-0 mt-2"><a href="#" class="text-dark text-decoration-none"><i class="fa fa-download fa-fw me-1 text-dark text-opacity-50"></i> Exportar</a></div>
-	<div class="ms-md-4 mt-md-0 mt-2 dropdown-toggle">
+	<!--<div class="ms-md-4 mt-md-0 mt-2 dropdown-toggle">
 		<a href="#" data-bs-toggle="dropdown" class="text-dark text-decoration-none">Mais ações <b class="caret"></b></a>
 		<div class="dropdown-menu">
 			<a class="dropdown-item" href="#">Action</a>
@@ -22,7 +22,7 @@
 			<div role="separator" class="dropdown-divider"></div>
 			<a class="dropdown-item" href="#">Separated link</a>
 		</div>
-	</div>
+	</div>-->
 </div>
 
 <div class="card border-0">
@@ -43,7 +43,7 @@
 					<div role="separator" class="dropdown-divider"></div>
 					<a class="dropdown-item" href="#">Separated link</a>
 				</div>-->
-				<div class="flex-fill position-relative">
+				<div class="flex-fill position-relative" [ngStyle]="{'margin-bottom':'18px'}">
 					<div class="input-group">
 						<div class="input-group-text position-absolute top-0 bottom-0 bg-none border-0 start-0" style="z-index: 1;">
 							<i class="fa fa-search opacity-5"></i>
@@ -56,8 +56,8 @@
 		
 			<!-- BEGIN order-cards OR tables -->
 			 <div class="row" [ngStyle]="{'padding':'0px', 'margin':'0px'}">
-				<div class="card col-md-4" *ngFor="let cadastro of cadastros | filtroCards : filtro" [ngStyle]="{'padding':'0px', 'margin':'0px'}">
-					<main-cards class="main-card mb-4" [ngStyle]="{'padding':'0px', 'margin':'0px'}" [cards]="cadastro"></main-cards>
+				<div class="col-sm-6 col-lg-4 mb-4" *ngFor="let cadastro of cadastros | filtroCards : filtro" [ngStyle]="{'padding':'0px', 'margin':'0px'}">
+					<main-cards class="card border-0" [ngStyle]="{'padding':'0px', 'margin':'0px'}" [cards]="cadastro"></main-cards>
 				</div>
 			 </div>
 			<!-- END order-cards OR tables-->

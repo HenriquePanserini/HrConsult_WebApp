@@ -12,7 +12,7 @@ import { FormAtualizarComponent } from '../../form/form-atualizar/form-atualizar
 export class MainCardsComponent implements OnInit {
   
   @ViewChild('dropdownContainer') dropdownContainer: ElementRef;
-  @Input() cards : Cadastro[];
+  @Input() cards : Cadastro;
   dropdownOpen : boolean = false;
 
   toggleDropdown() : void {

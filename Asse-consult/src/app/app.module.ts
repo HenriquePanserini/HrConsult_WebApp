@@ -15,7 +15,6 @@ import { SidebarComponent }                from './components/sidebar/sidebar.co
 import { SidebarRightComponent }           from './components/sidebar-right/sidebar-right.component';
 import { TopMenuComponent }                from './components/top-menu/top-menu.component';
 import { FloatSubMenuComponent }           from './components/float-sub-menu/float-sub-menu.component';
-import { MainPanelComponent }              from './components/main-panel/main-panel.component';
 import { PanelComponent }                  from './components/panel/panel.component';
 import { TablesComponent }                 from './components/tables/tables.component';
 import { OrderCardsComponent }             from './components/cards/order-cards/order-cards.component';
@@ -83,7 +82,6 @@ import { CadastroService } from './services/cadastro.service';
     SidebarRightComponent,
     TopMenuComponent,
     FloatSubMenuComponent,
-    MainPanelComponent,
     PanelComponent,
     OrderCardsComponent,
     MainCardsComponent,

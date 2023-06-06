@@ -1,21 +1,30 @@
  .card {
        border: none;
-       padding: rem(0px);
-       margin: rem(0px);
-
+       flex: 1 1 auto;
+       padding: 0.9375rem 0.9375rem;
+       color: var(--bs-card-color);
+       
     .card-body{
         width: rem(180px);
         height: rem(100px);
-        margin: rem(7px);
-        padding: rem(9px);
         border: none;
         border-radius: rem(8px);
-        background-color: $app-card-bg-body;
-        font-family: $font-family-helvetica;
+        background-color: $component-bg-smoke;
+        font-family: system-ui;
+        margin: 10px;
+        margin-bottom: 0px;
+        margin-top: 0px;
         color: $black;
         font-weight: 700;
         align-items: $app-card-content-position;
         justify-content: $app-card-content-position;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        height: var(--bs-card-height);
+        word-wrap: break-word;
+        background-clip: border-box;
 
         & .card-items{
 

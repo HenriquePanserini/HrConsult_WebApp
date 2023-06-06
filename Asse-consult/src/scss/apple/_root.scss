@@ -35,6 +35,7 @@
 	--app-sidebar-fontfamily: #{$font-family-roboto};
 	
 	--app-component-bg: #{$component-bg};
+	--app-component-bg-smoke: #($component-bg-smoke);
 	--app-component-bg-rgb: #{to-rgb($component-bg)};
 	--app-component-dropdown-bg: #{$component-dropdown-bg};
 	--app-component-dropdown-bg-rgb: #{to-rgb($component-dropdown-bg)};

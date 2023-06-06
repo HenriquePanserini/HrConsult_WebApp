@@ -1,31 +1,39 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Titulos } from '../../services/interface/titles.interface.service';
-import cards_agendamentos from '../../model/data/empresa-dados-cards.model';
+import { Component, ViewChild, AfterViewInit } 		 from '@angular/core';
 
 @Component({
   selector: 'panel',
+  inputs: ['title', 'variant', 'noBody', 'noButton', 'headerClass', 'bodyClass', 'footerClass', 'panelClass'],
   templateUrl: './panel.component.html'
 })
-export class PanelComponent implements OnInit {
-  
-  @Input() sizes : {header : any, body : any};
-  @Input() display : any;
-  @Input() title : any;
-  
-  cards : any = cards_agendamentos;
 
-  header : { width: string, height : string};
-  body : { width: string, height : string};
-
-  constructor() { 
-   
+export class PanelComponent implements AfterViewInit {
+  @ViewChild('panelFooter', { static: false }) panelFooter;
+  expand = false;
+  reload = false;
+  collapse = false;
+  remove = false;
+  showFooter = false;
+  
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.showFooter = (this.panelFooter) ? this.panelFooter.nativeElement && this.panelFooter.nativeElement.children.length > 0 : false;
+    });
   }
 
-  ngOnInit(): void {
-    
-     this.header = this.sizes.header;
-     this.body = this.sizes.body;
-     
+  panelExpand() {
+    this.expand = !this.expand;
   }
+  panelReload() {
+    this.reload = true;
 
+    setTimeout(() => {
+      this.reload = false;
+    }, 1500);
+  }
+  panelCollapse() {
+    this.collapse = !this.collapse;
+  }
+  panelRemove() {
+    this.remove = !this.remove;
+  }
 }

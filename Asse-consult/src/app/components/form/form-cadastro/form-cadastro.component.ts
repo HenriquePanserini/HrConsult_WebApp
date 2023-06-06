@@ -47,4 +47,10 @@ export class FormCadastroComponent implements OnInit{
     this.cadastroRealizado = true;
   }
 
+  code11 = 
+  `<div class="mb-3">
+    <label class="form-label">...</label>
+    <input class="form-control" type="text" />
+  </div>`;
+
 }

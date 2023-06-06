@@ -2,7 +2,10 @@
     position: relative;
     display: inline-block;
     padding-bottom: 100px;
+    left: 12px;
     transition: .3s;
+    border: none;
+    text-decoration: none;
 }
   
 .menu-icon {

@@ -1,6 +1,7 @@
 import { Component, OnDestroy, Renderer2 } from '@angular/core';
 import { Router }    from '@angular/router';
 import { NgForm }    from '@angular/forms';
+import { CadastroUsuario } from '../../../model/cadastro-usuario.model';
 import appSettings from '../../../config/app-settings';
 
 @Component({
@@ -10,6 +11,7 @@ import appSettings from '../../../config/app-settings';
 
 export class SignInPage implements OnDestroy {
   appSettings = appSettings;
+  cadastroUsuario : CadastroUsuario;
 
   constructor(private router: Router, private renderer: Renderer2) {
     this.appSettings.appEmpty = true;

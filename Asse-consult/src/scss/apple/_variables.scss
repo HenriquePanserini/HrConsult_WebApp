@@ -80,6 +80,7 @@ $red:         #FF3B30 !default;
 $silver:      #eeeeee !default;
 $teal:        #58eaa1 !default;
 $white:       #FFFFFF !default;
+$smoke:       #e6e6e6 !default;
 $yellow:      #FFCC00 !default;
 $dark-blue:   #0c2d50 !default;
 $dark-off-blue:   #0f3863 !default;
@@ -245,6 +246,7 @@ $enable-rtl:                        false !default;
 // 3.0 GLOBAL - Component Color 
 
 $component-bg:                      $white !default;
+$component-bg-smoke:                $smoke !default;
 $component-color:                   $gray-900 !default;
 $component-border-color:            $gray-300 !default;
 $component-active-bg:               $blue !default;
@@ -337,6 +339,7 @@ $font-size-sm:					            rem-default(11px) !default;
 $font-size-lg:					            rem-default(14px) !default;
 $font-family-roboto:                'Candara';
 $font-family-helvetica:             'Helvetica';
+$font-family-open-sans:             'Open Sans',sans-serif;
 
 $font-weight-normal:                400 !default;
 $font-weight-bold:                  500 !default;
