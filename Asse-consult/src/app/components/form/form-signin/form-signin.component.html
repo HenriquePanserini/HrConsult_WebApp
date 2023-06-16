@@ -1,0 +1,41 @@
+<form #f="ngForm" (ngSubmit)="onSubmit()" class="fs-13px">
+    <div class="mb-3">
+        <label class="mb-2">Nome <span class="text-danger">*</span></label>
+        <div class="row gx-3">
+            <div class="col-md-6 mb-2 mb-md-0">
+                <input type="text" class="form-control fs-13px" placeholder="Nome" id="nome" [(ngModel)]="user.nome" name="nome" required/>
+            </div>
+            <div class="col-md-6">
+                <input type="text" class="form-control fs-13px" placeholder="Sobrenome" id="sobrenome" [(ngModel)]="user.sobrenome" name="sobrenome" required/>
+            </div>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label class="mb-2">Email <span class="text-danger">*</span></label>
+        <input type="text" class="form-control fs-13px" placeholder="Endereço de email" id="email" [(ngModel)]="user.email" name="email" required/>
+    </div>
+    <div class="mb-3">
+        <label class="mb-2">Re-enter Email <span class="text-danger">*</span></label>
+        <input type="text" class="form-control fs-13px" placeholder="Repetir email" id="reEmail" [(ngModel)]="user.reEmail" name="reEmail" required/>
+    </div>
+    <div class="mb-4">
+        <label class="mb-2">Senha <span class="text-danger">*</span></label>
+        <input type="password" class="form-control fs-13px" placeholder="Senha" id="senha" [(ngModel)]="user.senha" name="senha" required/>
+    </div>
+    <div class="form-check mb-4">
+        <input class="form-check-input" type="checkbox" value="" id="agreementCheckbox" />
+        <label class="form-check-label" for="agreementCheckbox">
+            Ao clicar em Cadastre-se, você concorda com nossos <a href="javascript:;">Termos</a> e que você leu nosso <a href="javascript:;">Politica de uso</a>, incluindo o nosso <a href="javascript:;">Uso de cookies</a>.
+        </label>
+    </div>
+    <div class="mb-4">
+        <button type="submit" class="btn btn-primary d-block w-100 btn-lg h-45px fs-13px">Inscrever-se</button>
+    </div>
+    <div class="mb-4 pb-5">
+        Voce ja possue uma conta? Clique <a routerLink="/login">aqui</a> para acessar.
+    </div>
+    <hr class="bg-gray-600 opacity-2" />
+    <p class="text-center text-gray-600">
+        &copy; Asse consult direitos reservados 2023
+    </p>
+</form>

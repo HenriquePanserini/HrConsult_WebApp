@@ -5,6 +5,9 @@ import { BrowserModule, Title }                  from '@angular/platform-browser
 import { AppRoutingModule }                      from './app-routing.module';
 import { NgModule }                              from '@angular/core';
 import { FormsModule, ReactiveFormsModule }      from '@angular/forms';
+import { HttpClientModule }                      from '@angular/common/http';
+import { JwtModule, JwtHelperService }           from '@auth0/angular-jwt';
+
 import * as global                               from './config/globals';
 import 'bootstrap';
 
@@ -22,6 +25,7 @@ import { MainCardsComponent }              from './components/cards/main-cards/m
 import { OrderDetailsComponent }           from './components/order-detail/order-details.component';
 import { FormCadastroComponent }           from './components/form/form-cadastro/form-cadastro.component';
 import { FormAtualizarComponent }          from './components/form/form-atualizar/form-atualizar.component';
+import { RegistrationComponent }           from './components/form/form-signin/form-signin.component'
 
 // Component Module
 import { NgbDatepickerModule, NgbTimepickerModule } from '@ng-bootstrap/ng-bootstrap';
@@ -73,6 +77,13 @@ import { FiltroCardsPipe } from './services/pipes/filtro.pipe';
 
 //Service Module
 import { CadastroService } from './services/cadastro.service';
+import { UserService } from './services/usuario.service';
+import { AuthGuard } from './services/guard/autenticador.guard';
+import { AuthService } from './services/autenticador.service';
+
+export function jwtTokenGetter() {
+  return localStorage.getItem('access_token');
+}
 
 @NgModule({
   declarations: [
@@ -89,6 +100,7 @@ import { CadastroService } from './services/cadastro.service';
     OrderDetailsComponent,
     FormCadastroComponent,
     FormAtualizarComponent,
+    RegistrationComponent,
 
     HomePage,
     EmailInboxPage,
@@ -102,6 +114,14 @@ import { CadastroService } from './services/cadastro.service';
 
   ],
   imports: [
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: jwtTokenGetter,
+        allowedDomains: ['http://localhost:4200'],
+        disallowedRoutes: ['http://localhost:4200/login']
+      }
+    }),
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
@@ -126,7 +146,7 @@ import { CadastroService } from './services/cadastro.service';
     SweetAlert2Module.forRoot(),
     TrendModule
   ],
-  providers: [ Title, {
+  providers: [ CadastroService, UserService, AuthGuard, AuthService, JwtHelperService, Title, {
     provide: PERFECT_SCROLLBAR_CONFIG,
     useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
   }, {
@@ -141,7 +161,7 @@ import { CadastroService } from './services/cadastro.service';
 			}
 		}
 	},
-  CadastroService],
+  ],
   bootstrap: [ AppComponent ]
 })
 

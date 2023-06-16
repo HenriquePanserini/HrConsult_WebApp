@@ -1,20 +1,23 @@
-import { Component, OnDestroy, Renderer2 } from '@angular/core';
+import { Component, OnDestroy, Renderer2, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
-import { NgForm } from '@angular/forms';
+import { AuthService } from '../../services/autenticador.service';
 import appSettings from '../../config/app-settings';
 
 @Component({
   selector: 'login',
-  templateUrl: './login.pages.html'
+  templateUrl: './login.pages.html',
+  providers: [AuthService]
 })
 
-export class LoginPage implements OnDestroy {
+export class LoginPage implements OnDestroy, OnInit {
+
 
   appSettings = appSettings;
-  username! : string;
-  password! : string;
+  errorLogin: string;
+  email : string = '';
+  senha : string = ''; 
 
-  constructor(private router: Router, private renderer: Renderer2) {
+  constructor(private router: Router, private renderer: Renderer2, private authService : AuthService) {
     this.appSettings.appEmpty = true;
     this.renderer.addClass(document.body, 'bg-white');
   }
@@ -24,12 +27,27 @@ export class LoginPage implements OnDestroy {
     this.renderer.removeClass(document.body, 'bg-white');
   }
 
-  login() {
-      if(this.username !== null && this.password !== null){
-        this.router.navigate(['/home']);
-      }
-        
-        
+  ngOnInit(): void {
+     this.email.trim();
+     this.senha.trim();
   }
+
+  login() : void{
+    if(this.email.trim() !== '' && this.senha.trim() !== ''){
+      this.authService.login(this.email, this.senha).subscribe(
+        () => {
+          this.router.navigate(['/home']); // redirecionar para a página de sucesso
+        },
+        (error) => {
+          this.errorLogin = 'Erro ao acessar a conta. Verifique seu email e senha.';
+          console.error(error);
+        }
+      );
+      
+    }else{
+      this.errorLogin = 'Erro ao acessar a conta. Verifique seu email e senha.';
+    }
+  }
+
 
 }

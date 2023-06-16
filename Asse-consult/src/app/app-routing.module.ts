@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { AuthGuard } from './services/guard/autenticador.guard';
 
 //Login
 import { LoginPage }  from './pages/login/login.pages';
@@ -25,14 +26,14 @@ import { OrderDetailsComponent } from './components/order-detail/order-details.c
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '', redirectTo: 'login',  pathMatch: 'full'},
 
-  { path: 'home', component: HomePage, data: { title: 'Home'} },
+  { path: 'home', component: HomePage , canActivate: [AuthGuard], data: { title: 'Home'} },
 
   { path: 'login', component: LoginPage, data: { title: 'Login'} },
   { path: 'login/signin', component: SignInPage, data: { title: 'Sign in'} },
 
-  { path: 'registros/cadastrar/cpf', component: CadastroPage, data : {title: 'Cadastro ]'}},
+  { path: 'registros/cadastrar/cpf', component: CadastroPage, data : {title: 'Cadastro '}},
   { path: 'registros/cadastrar/cnpj', component: CadastroPage, data : {title: 'Cadastro'}},
   { path: 'registros/consulta', component: ConsultaPage, data : {title: 'Consulta'}},
 

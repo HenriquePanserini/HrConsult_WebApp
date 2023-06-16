@@ -12,7 +12,7 @@ import { FormAtualizarComponent } from '../../form/form-atualizar/form-atualizar
 export class MainCardsComponent implements OnInit {
   
   @ViewChild('dropdownContainer') dropdownContainer: ElementRef;
-  @Input() cards : Cadastro;
+  @Input() cards : any;
   dropdownOpen : boolean = false;
 
   toggleDropdown() : void {
@@ -21,10 +21,12 @@ export class MainCardsComponent implements OnInit {
 
   @HostListener('document:click', ['$event.target'])
   onClickOutside(targetElement: any): void {
-    const clickedInside = this.dropdownContainer.nativeElement.contains(targetElement);
-    if (!clickedInside) {
-      this.dropdownOpen = false;
-    }
+    
+      const clickedInside = this.dropdownContainer.nativeElement.contains(targetElement);
+      if (!clickedInside) {
+        this.dropdownOpen = false;
+      
+      }
   }
 
   constructor(private cadastroService: CadastroService, private modalService: NgbModal) {
@@ -32,7 +34,7 @@ export class MainCardsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-     this.cards
+
   }
 
   abrirEditarCadastro(cards : Cadastro) : void {

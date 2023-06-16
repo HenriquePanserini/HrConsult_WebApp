@@ -49,22 +49,22 @@ export class AppComponent implements OnInit {
   // set page minified
   onAppSidebarMinifiedToggled(val: boolean): void {
   	this.appSettings.appSidebarMinified = !this.appSettings.appSidebarMinified;
-	}
+  }
 
   // set app sidebar end toggled
   onAppSidebarEndToggled(val: boolean): void {
   	this.appSettings.appSidebarEndToggled = !this.appSettings.appSidebarEndToggled;
-	}
+  }
 
   // hide mobile sidebar
   onAppSidebarMobileToggled(val: boolean): void {
   	this.appSettings.appSidebarMobileToggled = !this.appSettings.appSidebarMobileToggled;
-	}
+  }
 
   // toggle right mobile sidebar
   onAppSidebarEndMobileToggled(val: boolean): void {
   	this.appSettings.appSidebarEndMobileToggled = !this.appSettings.appSidebarEndMobileToggled;
-	}
+  }
 
 	onAppDarkModeChanged(val: boolean): void {
 		if (this.appSettings.appDarkMode) {

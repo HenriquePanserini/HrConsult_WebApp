@@ -28,8 +28,8 @@
         <a class="btn border-0 bg-transparent rounded-pill outline-none w-40px h-40px p-0 d-flex align-items-center justify-content-center" data-bs-toggle="dropdown">
             <i class="fa fa-ellipsis-h text-gray-600 outline-none bg-transparent border-0"></i>
         </a>
-        <div class="dropdown-menu dropdown-menu-end border-0">
-            <a href="#" class="dropdown-item d-flex align-items-center">
+        <div class="dropdown-menu dropdown-menu-end border-0" #dropdownContainer>
+            <a href="/registros/consulta" class="dropdown-item d-flex align-items-center">
                 <i class="fa fa-fw fa-bookmark fa-lg"></i> 
                 <div class="flex-1 ps-1">
                     <div>Menu</div>
@@ -37,10 +37,10 @@
                 </div>
             </a>
             <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item" (click)="abrirEditarCadastro(cards)"><i class="fa fa-fw fa-edit fa-lg me-1"></i> Editar Cadastro</a>
+            <button class="dropdown-item" (click)="abrirEditarCadastro(cards)"><i class="fa fa-fw fa-edit fa-lg me-1"></i> Editar Cadastro</button>
             <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item"><i class="fa fa-fw fa-archive fa-lg me-1" (click)="excluirCadastro(cards.id)"></i> Excluir Cadastro</a>
-            <a href="#" class="dropdown-item"><i class="fa fa-fw fa-trash-alt fa-lg me-1"></i> Move to Recycle bin</a>
+            <button class="dropdown-item" (click)="excluirCadastro(cards.id)"><i class="fa fa-fw fa-archive fa-lg me-1"></i> Excluir Cadastro</button>
+            <button class="dropdown-item"><i class="fa fa-fw fa-trash-alt fa-lg me-1"></i> Move to Recycle bin</button>
         </div>
     </div>
 </div>

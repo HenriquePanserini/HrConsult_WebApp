@@ -25,13 +25,13 @@
 		
 		<!-- BEGIN login-content -->
 		<div class="login-content">
-			<form #loginForm="ngForm" class="fs-13px">
+			<form #loginForm="ngForm" class="fs-13px" (submit)="login()">
 				<div class="form-floating mb-15px">
-					<input type="text" class="form-control h-45px fs-13px" placeholder="Endereço de email ou usuario" name="username" (ngModel)="username" required/>
+					<input type="email" class="form-control h-45px fs-13px" placeholder="Endereço de email ou usuario" name="username" [(ngModel)]="email" required/>
 					<label for="emailAddress" class="d-flex align-items-center fs-13px text-gray-600">Endereço de email ou usuario</label>
 				</div>
 				<div class="form-floating mb-15px">
-					<input type="password" class="form-control h-45px fs-13px" placeholder="Senha do usuario" name="password" [ngModel]="password" required/>
+					<input type="password" class="form-control h-45px fs-13px" placeholder="Senha do usuario" name="password" [(ngModel)]="senha" required/>
 					<label for="password" class="d-flex align-items-center fs-13px text-gray-600">Senha do usuario </label>
 				</div>
 				<div class="form-check mb-30px">
@@ -41,8 +41,13 @@
 					</label>
 				</div>
 				<div class="mb-15px">
-					<button type="submit" (click)="login()" class="btn btn-success d-block h-45px w-100 btn-lg fs-14px">Entrar</button>
+					<button type="submit" class="btn btn-success d-block h-45px w-100 btn-lg fs-14px">Entrar</button>
 				</div>
+				
+				<div *ngIf="errorLogin" class="erro-login mb-3" [ngStyle]="{'color':'red'}">
+					{{ errorLogin }}
+				</div>
+
 				<div class="mb-40px pb-40px text-dark">
 					Não tem cadastro? Clique <a routerLink="/login/signin" class="text-primary">aqui</a> para se registrar.
 				</div>
