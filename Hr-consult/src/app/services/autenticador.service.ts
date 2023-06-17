@@ -31,7 +31,7 @@ export class AuthService {
             })
         )*/
 
-        return this.userService.getUserByEmail(email).pipe(
+        return this.userService.getUserByEmail(email, senha).pipe(
             tap(user => {
               if (user.email === email && user.senha === senha) {
                 const token = this.generateToken(user);
@@ -49,7 +49,7 @@ export class AuthService {
         senha: user.senha.trim()
       };
   
-      return jwt_decode(payload, this.getDecodedToken()); // Adjust the expiration time as needed
+      return jwt_decode(payload); // Adjust the expiration time as needed
     }
 
     getDecodedToken(): any {

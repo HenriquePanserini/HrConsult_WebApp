@@ -99,6 +99,21 @@
             Adição de informaçoes de parcelas individuais aos paineis de detalhamento
         </li>
     </ul>
+    <h3>Atualização v.7 <span>&#270D</span></h3>
+    <ul>
+        <li>
+            Criação de model de dados de usuarios cadastrados
+        </li>
+        <li>
+            Criação de service para construção de crud de cadastro de usuario
+        </li>
+        <li>
+           Criação de pagina de inscrição de usuarios e componentização de formulario de cadastro de usuario
+        </li>
+        <li>
+            Filtro de resposta 
+        </li>
+    </ul>
     <div>
         <span>Execução: cd Asse-Consult | ng serve</span><br>
         <span>Obs*: Caso necessario executar npm install</span><br>

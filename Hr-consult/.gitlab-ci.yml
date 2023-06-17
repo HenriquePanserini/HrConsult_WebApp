@@ -1,0 +1,29 @@
+# Etapas do pipeline
+stages: 
+   - build
+   - test
+   - deploy
+
+# Variaveis de ambiente
+variables:
+    NODE_ENV: "produção"
+    PROJECT_NAME_SHORT: hrc
+    DEPLOY_PATH: ./var/hr-consult/www/start
+
+# Execução dos estagios 
+build: 
+  stage: build
+  image: node:16.0.0
+  variables:
+    TAG: prod
+  script:
+    - export VERSION=1.0.$(git rev-list --count HEAD)-$TAG
+    - cd /hr-consult
+    - yarn
+    - yarn run dev
+
+test:
+  stage: test
+
+deploy:
+  stage: deploy
